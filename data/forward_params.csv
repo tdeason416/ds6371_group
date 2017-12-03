@@ -1,0 +1,8 @@
+Parameter,Estimate
+Intercept,-1.550928
+LogLotArea,0.101900
+OverallQual,0.110904
+OverallCond,0.063287
+YearBuilt,0.004269
+Log1stFlrSF,0.445317
+2ndFlrSF,0.000245

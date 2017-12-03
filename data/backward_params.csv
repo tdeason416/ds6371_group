@@ -1,0 +1,247 @@
+Parameter,Estimate
+Intercept,3.638448
+IntLotFrontage,-0.000231
+MSSubClass,-0.000139
+MSZoning C,-0.363794
+MSZoning FV,0.089339
+MSZoning RH,0.082802
+MSZoning RL,0.042371
+MSZoning RM,0
+LogLotArea,0.073297
+Street Grvl,-0.104974
+Street Pave,0
+Alley Gr,-0.030194
+Alley NA,-0.023189
+Alley Pa,0
+LotShape IR1,-0.005405
+LotShape IR2,-0.002317
+LotShape IR3,0.104030
+LotShape Reg,0
+LandContour Bnk,-0.016821
+LandContour HLS,0.002394
+LandContour Low,-0.019266
+LandContour Lvl,0
+LotConfig Corner,0.011597
+LotConfig CulDSac,0.038674
+LotConfig FR2,-0.034966
+LotConfig FR3,-0.058528
+LotConfig Inside,0
+LandSlope Gtl,0.162705
+LandSlope Mod,0.194058
+LandSlope Sev,0
+Neighborhood Blmngtn,-0.038976
+Neighborhood Blueste,0.048870
+Neighborhood BrDale,0.015966
+Neighborhood BrkSide,0.017606
+Neighborhood ClearCr,-0.041058
+Neighborhood CollgCr,-0.068908
+Neighborhood Crawfor,0.082490
+Neighborhood Edwards,-0.131454
+Neighborhood Gilbert,-0.075630
+Neighborhood IDOTRR,0.016598
+Neighborhood MeadowV,-0.111492
+Neighborhood Mitchel,-0.091530
+Neighborhood NAmes,-0.071000
+Neighborhood NPkVill,-0.039215
+Neighborhood NWAmes,-0.105459
+Neighborhood NoRidge,0.009716
+Neighborhood NridgHt,0.029834
+Neighborhood OldTown,-0.042704
+Neighborhood SWISU,-0.035793
+Neighborhood Sawyer,-0.074587
+Neighborhood SawyerW,-0.070324
+Neighborhood Somerst,-0.028006
+Neighborhood StoneBr,0.085158
+Neighborhood Timber,-0.052101
+Neighborhood Veenker,0
+Condition1 Artery,-0.120588
+Condition1 Feedr,-0.083044
+Condition1 Norm,-0.042370
+Condition1 PosA,-0.031439
+Condition1 PosN,-0.005419
+Condition1 RRAe,-0.142894
+Condition1 RRAn,-0.058972
+Condition1 RRNe,-0.058083
+Condition1 RRNn,0
+Condition2 Artery,-0.012564
+Condition2 Feedr,-0.018903
+Condition2 Norm,0.043119
+Condition2 PosA,0.228834
+Condition2 PosN,-0.689906
+Condition2 RRNn,0
+BldgType 1Fam,0.026622
+BldgType 2fmCon,0.042170
+BldgType Duplex,-0.018980
+BldgType Twnhs,-0.024079
+BldgType TwnhsE,0
+OverallQual,0.044027
+OverallCond,0.040149
+YearBuilt,0.001907
+YearRemodAdd,0.000586
+RoofStyle Flat,-0.186115
+RoofStyle Gable,-0.085519
+RoofStyle Gambr,-0.055062
+RoofStyle Hip,-0.083502
+RoofStyle Mansa,0
+RoofMatl ClyTile,-1.749226
+RoofMatl CompShg,-0.085917
+RoofMatl Membran,0.272881
+RoofMatl Roll,-0.026816
+RoofMatl Tar&Grv,-0.101021
+RoofMatl WdShake,-0.261501
+RoofMatl WdShngl,0
+MasVnrType BrkCmn,-0.081327
+MasVnrType BrkFace,-0.017529
+MasVnrType None,-0.022256
+MasVnrType Stone,0
+LogMasVnrArea,-0.001304
+ExterQual Ex,0.022336
+ExterQual Fa,-0.002942
+ExterQual Gd,0.003759
+ExterQual TA,0
+ExterCond Ex,-0.010044
+ExterCond Fa,-0.040625
+ExterCond Gd,-0.022517
+ExterCond TA,0
+Foundation BrkTil,0.229864
+Foundation CBlock,0.261097
+Foundation PConc,0.260480
+Foundation Slab,0.307087
+Foundation Stone,0.303611
+Foundation Wood,0
+BsmtQual Ex,0.054654
+BsmtQual Fa,0.006872
+BsmtQual Gd,0.020876
+BsmtQual NA,0.013270
+BsmtQual TA,0
+BsmtCond Fa,-0.024310
+BsmtCond Gd,-0.005121
+BsmtCond NA,0
+BsmtCond Po,-0.140531
+BsmtCond TA,0
+BsmtExposure Av,0.003930
+BsmtExposure Gd,0.056599
+BsmtExposure Mn,-0.001748
+BsmtExposure NA,-0.043053
+BsmtExposure No,0
+BsmtFinType1 ALQ,-0.107786
+BsmtFinType1 BLQ,-0.109806
+BsmtFinType1 GLQ,-0.090393
+BsmtFinType1 LwQ,-0.128291
+BsmtFinType1 NA,0
+BsmtFinType1 Rec,-0.112851
+BsmtFinType1 Unf,0
+LogBsmtFinSF1,0.029535
+BsmtFinType2 ALQ,-0.034792
+BsmtFinType2 BLQ,-0.050318
+BsmtFinType2 GLQ,-0.017188
+BsmtFinType2 LwQ,-0.039668
+BsmtFinType2 NA,-0.021893
+BsmtFinType2 Rec,-0.030538
+BsmtFinType2 Unf,0
+BsmtFinSF2,0.000122
+BsmtUnfSF,0.000031933
+Heating GasA,-0.050248
+Heating GasW,0.048846
+Heating Grav,-0.143928
+Heating OthW,-0.096249
+Heating Wall,0
+HeatingQC Ex,0.035009
+HeatingQC Fa,0.037581
+HeatingQC Gd,0.011937
+HeatingQC Po,-0.089259
+HeatingQC TA,0
+CentralAir N,-0.092112
+CentralAir Y,0
+Electrical FuseA,0.001597
+Electrical FuseF,0.019199
+Electrical FuseP,-0.119960
+Electrical Mix,0
+Electrical NA,0.120597
+Electrical SBrkr,0
+Log1stFlrSF,0.344678
+2ndFlrSF,0.000209
+LowQualFinSF,-0.000018252
+BsmtFullBath,0.022313
+BsmtHalfBath,0.004788
+FullBath,0.030695
+HalfBath,0.028019
+BedroomAbvGr,-0.003198
+KitchenAbvGr,-0.064513
+KitchenQual Ex,0.061194
+KitchenQual Fa,0.007549
+KitchenQual Gd,-0.006787
+KitchenQual TA,0
+TotRmsAbvGrd,0.005301
+Functional Maj1,-0.061635
+Functional Maj2,-0.203220
+Functional Min1,-0.059856
+Functional Min2,-0.054473
+Functional Mod,-0.102736
+Functional Typ,0
+Fireplaces,0.022887
+FireplaceQu Ex,0.026033
+FireplaceQu Fa,0.004146
+FireplaceQu Gd,0.020437
+FireplaceQu NA,0.019084
+FireplaceQu Po,-0.023480
+FireplaceQu TA,0
+GarageType 2Types,-0.062054
+GarageType Attchd,-0.010666
+GarageType Basment,-0.019466
+GarageType BuiltIn,-0.035576
+GarageType CarPort,-0.053959
+GarageType Detchd,0
+GarageYrBlt,-0.000028731
+GarageFinish Fin,0.016274
+GarageFinish RFn,0.014855
+GarageFinish Unf,0
+GarageCars,0.033126
+LogGarageArea,0.042170
+GarageQual Ex,0.351354
+GarageQual Fa,-0.020751
+GarageQual Gd,0.024613
+GarageQual Po,-0.021328
+GarageQual TA,0
+GarageCond Ex,-0.347378
+GarageCond Fa,-0.033402
+GarageCond Gd,0.005137
+GarageCond Po,0.098331
+GarageCond TA,0
+PavedDrive N,-0.011619
+PavedDrive P,-0.036717
+PavedDrive Y,0
+LogWoodDeckSF,0.003761
+LogOpenPorchSF,0.003836
+LogEnclosedPorch,0.004597
+Log3SsnPorch,0.010776
+LogScreenPorch,0.007850
+LogPoolArea,1.003531
+PoolQC Ex,-6.132658
+PoolQC Fa,-6.428927
+PoolQC Gd,-6.185390
+PoolQC NA,0
+Fence GdPrv,-0.017311
+Fence GdWo,-0.011866
+Fence MnPrv,-0.004832
+Fence MnWw,-0.031468
+Fence NA,0
+MiscFeature NA,0.396031
+MiscFeature Othr,0.400160
+MiscFeature Shed,0.010316
+MiscFeature TenC,0
+LogMiscVal,0.059647
+MoSold,-0.000850
+YrSold,-0.000584
+SaleType COD,0.008781
+SaleType CWD,0.072266
+SaleType Con,0.084790
+SaleType New,0.065862
+SaleType Oth,0.566736
+SaleType WD,0
+SaleCondition Abnorml,-0.046818
+SaleCondition AdjLand,0.239192
+SaleCondition Alloca,0.014814
+SaleCondition Family,-0.027156
+SaleCondition Normal,0.022716
+SaleCondition Partial,0

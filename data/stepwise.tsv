@@ -1,0 +1,10 @@
+Parameter	DF	Estimate	Standard
+Error	t Value
+Intercept	1	-1.550928	0.446433	-3.47
+LogLotArea	1	0.101900	0.011103	9.18
+OverallQual	1	0.110904	0.005312	20.88
+OverallCond	1	0.063287	0.004850	13.05
+YearBuilt	1	0.004269	0.000210	20.32
+Log1stFlrSF	1	0.445317	0.021389	20.82
+2ndFlrSF	1	0.000245	0.000012953	18.89
+
