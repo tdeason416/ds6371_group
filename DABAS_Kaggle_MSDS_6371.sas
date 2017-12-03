@@ -706,11 +706,10 @@ MiscFeature
 SaleType
 SaleCondition;
 model LogSalePrice = IntLotFrontage MSSubClass MSZoning LogLotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType LogMasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 LogBsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical Log1stFlrSF '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars LogGarageArea GarageQual GarageCond PavedDrive LogWoodDeckSF LogOpenPorchSF LogEnclosedPorch Log3SsnPorch LogScreenPorch LogPoolArea PoolQC Fence MiscFeature LogMiscVal MoSold YrSold SaleType SaleCondition
-/selection=Forward stats =adjrsq;
+/selection=Forward(stop=CV) cvmethod=random(5) stats =adjrsq;
 Run;
 
 
-/*
 Proc glmselect data=train_dummy;
 class MSZoning
 Street
@@ -756,15 +755,13 @@ MiscFeature
 SaleType
 SaleCondition;
 model LogSalePrice = IntLotFrontage MSSubClass MSZoning LogLotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType LogMasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 LogBsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical Log1stFlrSF '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars LogGarageArea GarageQual GarageCond PavedDrive LogWoodDeckSF LogOpenPorchSF LogEnclosedPorch Log3SsnPorch LogScreenPorch LogPoolArea PoolQC Fence MiscFeature LogMiscVal MoSold YrSold SaleType SaleCondition
-/selection=Backward stats =adjrsq;
+/selection=Backward(stop=CV) cvmethod=random(5) stats =adjrsq;
 Run;
-*/
 
 
-/*
-Proc glmselect data=train;
+
+Proc glmselect data=train_dummy;
 class MSZoning
-LotFrontage
 Street
 Alley
 LotShape
@@ -807,8 +804,8 @@ Fence
 MiscFeature
 SaleType
 SaleCondition;
-model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition
-/selection=Stepwise stats =adjrsq;
+model LogSalePrice = IntLotFrontage MSSubClass MSZoning LogLotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType LogMasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 LogBsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical Log1stFlrSF '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars LogGarageArea GarageQual GarageCond PavedDrive LogWoodDeckSF LogOpenPorchSF LogEnclosedPorch Log3SsnPorch LogScreenPorch LogPoolArea PoolQC Fence MiscFeature LogMiscVal MoSold YrSold SaleType SaleCondition
+/selection=Stepwise(stop=CV) cvmethod=random(5) stats =adjrsq;
 Run;
-*/
+
 
