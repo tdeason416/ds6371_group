@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import scipy.stats as scs
+from sklearn import model_selection as ms
+from sklearn import linear_model as lm
 
 def create_dummy_vars(df, delim='#', null_fill=-1):
     '''
@@ -37,12 +39,12 @@ def create_dummy_vars(df, delim='#', null_fill=-1):
 
 def reduce_variables(df, y_col, min_r2, max_cov_r2):
     '''
-    Reduces the number of variables in a dataframe by eliminating all variables with an r2 below a given threshold and eliminating half of the variables with too high of a covariance.
+    Reduces the number of variables in a dataframe by eliminating all variables with an r2 below a given threshold and 
+    eliminating half of the variables with too high of a covariance.
     --------
     PARAMETERS
     --------
     RETURNS
-    
     '''
     y = df[y_col]
     score = {}
@@ -72,3 +74,87 @@ def reduce_variables(df, y_col, min_r2, max_cov_r2):
     new_keep_cols = list(keep_cols.drop(list(drops)).index)
     new_keep_cols.append(y_col)
     return df[new_keep_cols]
+
+def convert_tsv(input_file, output_File):
+    with open(input_file, 'r') as readfile:
+        params = readfile.read()
+    big_dict = pd.Series()
+    for line in params.split('\n'):
+        values = line.split('\t')
+        if len(values) < 4:
+            continue
+        try:
+            int(values[0])
+        except:
+            big_dict[values[0]] = values[2]
+    nowastring = ''
+    for k, v in big_dict.iteritems():
+        nowastring += '{},{}\n'.format(k,v)
+    with open(output_File, 'w') as writefile:
+        writefile.write(nowastring)
+    return big_dict
+
+def _app_squared(x):
+    return x*x
+
+def _app_log(x):
+    return np.log(x)
+
+def _app_sqrt(x):
+    return np.sqrt(x)
+
+def _app_cube(x):
+    return x*x*x
+
+def dict_max(dic):
+    keymax = list(dic.keys())[0]
+    valmax = dic[keymax]
+    for key, val in dic.items():
+        if val > valmax:
+            valmax = val
+            keymax = key
+    return keymax
+
+def transform_numerics(df, delim='#', label='SalePrice', random_seed=42):
+    '''
+    Checks to see if applying transformations to any of the columns improves the performance of the model.
+    --------
+    PARAMETERS
+    df: pd.DataFrame
+        -   contains numeric and catagorical data as well as label axis
+    delim: str
+        -   Character which to split col names and transformation operation 
+            (also character that denotes null/dummy variable)
+    random_seed: int
+        -   Number used to ensure train_test_split is the same for all models.
+    '''
+    out_vals = {}
+    func_dic = {'sqr': _app_squared, 'log': _app_log, 'sqrt' : _app_sqrt, 'cube': _app_cube} 
+    
+    # df_t[col].apply(func_dic['sqr'])
+    y = df[label]
+    X = df.drop(label, axis=1)
+    Xtr, Xte, ytr, yte = ms.train_test_split(X, y, train_size=.80, random_state=random_seed)
+    model = lm.LinearRegression(n_jobs=-1)
+    model.fit(Xtr, ytr)
+    base_score = np.abs(model.score(Xte, yte))
+    num_cols = np.array([col for col in X.columns if delim not in col])
+    for col in  num_cols:
+        thiscol = {}
+        for name, func in func_dic.items():
+            rowname = '{}{}{}'.format(col, delim, name)
+            X = df.drop(label, axis=1)
+            X[col] = (X[col]+ .00001).apply(func)
+            if (np.isfinite(X[col]) == False).sum():
+                continue
+            Xtr, Xte, ytr, yte = ms.train_test_split(X, y, train_size=.80, random_state=random_seed)
+            model = lm.LinearRegression(n_jobs=-1)
+            model.fit(Xtr, ytr)
+            thiscol[name] = np.abs(model.score(Xte, yte))
+        rowname = '{}{}{}'.format(col, delim, dict_max(thiscol))
+        out_vals[rowname] = {}
+        out_vals[rowname]['score'] = np.abs(model.score(Xte, yte))
+        out_vals[rowname]['diff'] = out_vals[rowname]['score'] - base_score
+    return pd.DataFrame(out_vals).T.sort_values('diff', ascending=False)
+
+
