@@ -5,8 +5,23 @@ out= train dbms=csv replace;
 getnames=yes;
 run;
 
+*Creating Dummy Variables and performing log transforms, adding 1 to account for 0 values if necessary;
 Data train_dummy;
 set train;
+LogSalePrice = Log(SalePrice);
+IntLotFrontage = int(LotFrontage);
+LogLotArea = Log(LotArea);
+LogMasVnrArea = Log(MasVnrArea+1);
+LogBsmtFinSF1 = Log(BsmtFinSF1+1);
+Log1stFlrSF = Log('1stFlrSF'n);
+LogPoolArea = Log(PoolArea+1);
+LogMiscVal = Log(MiscVal+1);
+LogGarageArea = Log(GarageArea);
+LogWoodDeckSF = Log(WoodDeckSF+1);
+LogOpenPorchSF = Log(OpenPorchSF+1);
+LogEnclosedPorch = Log(EnclosedPorch+1);
+Log3SsnPorch = Log('3SsnPorch'n+1);
+LogScreenPorch = Log(ScreenPorch+1);
 Alley_dum0 = 0;
 Alley_dum1 = 0;
 LotShape_dum0 = 0;
@@ -282,7 +297,7 @@ if RoofStyle = 'Flat' then RoofStyle_dum0 = 1;
 if RoofStyle = 'Gable' then RoofStyle_dum1 = 1;
 if RoofStyle = 'Gambr' then RoofStyle_dum2 = 1;
 if RoofStyle = 'Hip' then RoofStyle_dum3 = 1;
-if RoofStyle = 'Mansa' then RoofStyle_dum4 = 1;
+if RoofStyle = 'Mansard' then RoofStyle_dum4 = 1;
 if RoofMatl = 'ClyTile' then RoofMatl_dum0 = 1;
 if RoofMatl = 'CompShg' then RoofMatl_dum1 = 1;
 if RoofMatl = 'Membran' then RoofMatl_dum2 = 1;
@@ -353,7 +368,7 @@ if BsmtFinType2 = 'BLQ' then BsmtFinType2_dum1 = 1;
 if BsmtFinType2 = 'GLQ' then BsmtFinType2_dum2 = 1;
 if BsmtFinType2 = 'LwQ' then BsmtFinType2_dum3 = 1;
 if BsmtFinType2 = 'Rec' then BsmtFinType2_dum4 = 1;
-if Heating = 'Floo' then Heating_dum0 = 1;
+if Heating = 'Floor' then Heating_dum0 = 1;
 if Heating = 'GasA' then Heating_dum1 = 1;
 if Heating = 'GasW' then Heating_dum2 = 1;
 if Heating = 'Grav' then Heating_dum3 = 1;
@@ -416,21 +431,19 @@ if SaleType = 'New' then SaleType_dum3 = 1;
 if SaleType = 'Oth' then SaleType_dum4 = 1;
 run;
 
-
-*LOTFRONTAGE;
-
 Proc reg data = train_dummy;
-Model SalePrice = MSSUBCLASS
-LOTAREA
+Model LogSalePrice = IntLotFrontage
+MSSUBCLASS
+LogLotArea
 OVERALLQUAL
 OVERALLCOND
 YEARBUILT
 YEARREMODADD
-MASVNRAREA
-BSMTFINSF1
+LogMasVnrArea
+LogBsmtFinSF1
 BSMTFINSF2
 BSMTUNFSF
-'1stFlrSF'n 
+Log1stFlrSF
 '2ndFlrSF'n
 LOWQUALFINSF
 BSMTFULLBATH
@@ -443,14 +456,14 @@ TOTRMSABVGRD
 FIREPLACES
 GARAGEYRBLT
 GARAGECARS
-GARAGEAREA
-WOODDECKSF
-OPENPORCHSF
-ENCLOSEDPORCH
-'3SSNPORCH'n
-SCREENPORCH
-POOLAREA
-MISCVAL
+LogGarageArea
+LogWoodDeckSF
+LogOpenPorchSF
+LogEnclosedPorch
+Log3SsnPorch
+LogScreenPorch
+LogPoolArea
+LogMiscVal
 MOSOLD
 YRSOLD
 ALLEY_DUM0
@@ -461,7 +474,6 @@ LOTSHAPE_DUM2
 LANDCONTOUR_DUM0
 LANDCONTOUR_DUM1
 LANDCONTOUR_DUM2
-UTILITIES_DUM0
 LOTCONFIG_DUM0
 LOTCONFIG_DUM1
 LOTCONFIG_DUM2
@@ -505,8 +517,6 @@ CONDITION2_DUM1
 CONDITION2_DUM2
 CONDITION2_DUM3
 CONDITION2_DUM4
-CONDITION2_DUM5
-CONDITION2_DUM6
 BLDGTYPE_DUM0
 BLDGTYPE_DUM1
 BLDGTYPE_DUM2
@@ -526,7 +536,6 @@ ROOFSTYLE_DUM4
 ROOFMATL_DUM0
 ROOFMATL_DUM1
 ROOFMATL_DUM2
-ROOFMATL_DUM3
 ROOFMATL_DUM4
 ROOFMATL_DUM5
 ROOFMATL_DUM6
@@ -592,7 +601,6 @@ BSMTFINTYPE2_DUM1
 BSMTFINTYPE2_DUM2
 BSMTFINTYPE2_DUM3
 BSMTFINTYPE2_DUM4
-HEATING_DUM0
 HEATING_DUM1
 HEATING_DUM2
 HEATING_DUM3
@@ -614,7 +622,6 @@ FUNCTIONAL_DUM1
 FUNCTIONAL_DUM2
 FUNCTIONAL_DUM3
 FUNCTIONAL_DUM4
-FUNCTIONAL_DUM5
 FIREPLACEQU_DUM0
 FIREPLACEQU_DUM1
 FIREPLACEQU_DUM2
@@ -644,7 +651,6 @@ FENCE_DUM0
 FENCE_DUM1
 FENCE_DUM2
 FENCE_DUM3
-MISCFEATURE_DUM0
 MISCFEATURE_DUM1
 MISCFEATURE_DUM2
 MISCFEATURE_DUM3;
