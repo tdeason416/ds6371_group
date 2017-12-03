@@ -431,6 +431,8 @@ if SaleType = 'New' then SaleType_dum3 = 1;
 if SaleType = 'Oth' then SaleType_dum4 = 1;
 run;
 
+
+/*
 Proc reg data = train_dummy;
 Model LogSalePrice = IntLotFrontage
 MSSUBCLASS
@@ -655,106 +657,12 @@ MISCFEATURE_DUM1
 MISCFEATURE_DUM2
 MISCFEATURE_DUM3;
 Run;
-
-/*
-ods graphics on;
-Proc glm data = train PLOTS=ALL;
-class MSZoning
-LotFrontage
-Street
-Alley
-LotShape
-LandContour
-Utilities
-LotConfig
-LandSlope
-Neighborhood
-Condition1
-Condition2
-BldgType
-HouseStyle
-RoofStyle
-RoofMatl
-Exterior1st
-Exterior2nd
-MasVnrType
-ExterQual
-ExterCond
-Foundation
-BsmtQual
-BsmtCond
-BsmtExposure
-BsmtFinType1
-BsmtFinType2
-Heating
-HeatingQC
-CentralAir
-Electrical
-KitchenQual
-Functional
-FireplaceQu
-GarageType
-GarageFinish
-GarageQual
-GarageCond
-PavedDrive
-PoolQC
-Fence
-MiscFeature
-SaleType
-SaleCondition;
-Model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition;
-means MSZoning
-LotFrontage
-Street
-Alley
-LotShape
-LandContour
-Utilities
-LotConfig
-LandSlope
-Neighborhood
-Condition1
-Condition2
-BldgType
-HouseStyle
-RoofStyle
-RoofMatl
-Exterior1st
-Exterior2nd
-MasVnrType
-ExterQual
-ExterCond
-Foundation
-BsmtQual
-BsmtCond
-BsmtExposure
-BsmtFinType1
-BsmtFinType2
-Heating
-HeatingQC
-CentralAir
-Electrical
-KitchenQual
-Functional
-FireplaceQu
-GarageType
-GarageFinish
-GarageQual
-GarageCond
-PavedDrive
-PoolQC
-Fence
-MiscFeature
-SaleType
-SaleCondition;
-Run;
+*/
 
 
 *import training data;
-Proc glmselect data=train;
+Proc glmselect data=train_dummy;
 class MSZoning
-LotFrontage
 Street
 Alley
 LotShape
@@ -797,14 +705,14 @@ Fence
 MiscFeature
 SaleType
 SaleCondition;
-model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition
-/selection=Forward(select=SL) stats =adjrsq;
+model LogSalePrice = IntLotFrontage MSSubClass MSZoning LogLotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType LogMasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 LogBsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical Log1stFlrSF '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars LogGarageArea GarageQual GarageCond PavedDrive LogWoodDeckSF LogOpenPorchSF LogEnclosedPorch Log3SsnPorch LogScreenPorch LogPoolArea PoolQC Fence MiscFeature LogMiscVal MoSold YrSold SaleType SaleCondition
+/selection=Forward stats =adjrsq;
 Run;
 
 
-Proc glmselect data=train;
+/*
+Proc glmselect data=train_dummy;
 class MSZoning
-LotFrontage
 Street
 Alley
 LotShape
@@ -847,58 +755,60 @@ Fence
 MiscFeature
 SaleType
 SaleCondition;
-model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition;
-/selection=Backward(select=SL) stats =adjrsq;
+model LogSalePrice = IntLotFrontage MSSubClass MSZoning LogLotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType LogMasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 LogBsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical Log1stFlrSF '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars LogGarageArea GarageQual GarageCond PavedDrive LogWoodDeckSF LogOpenPorchSF LogEnclosedPorch Log3SsnPorch LogScreenPorch LogPoolArea PoolQC Fence MiscFeature LogMiscVal MoSold YrSold SaleType SaleCondition
+/selection=Backward stats =adjrsq;
 Run;
-
-
-Proc glmselect data=train;
-class MSZoning
-LotFrontage
-Street
-Alley
-LotShape
-LandContour
-Utilities
-LotConfig
-LandSlope
-Neighborhood
-Condition1
-Condition2
-BldgType
-HouseStyle
-RoofStyle
-RoofMatl
-Exterior1st
-Exterior2nd
-MasVnrType
-ExterQual
-ExterCond
-Foundation
-BsmtQual
-BsmtCond
-BsmtExposure
-BsmtFinType1
-BsmtFinType2
-Heating
-HeatingQC
-CentralAir
-Electrical
-KitchenQual
-Functional
-FireplaceQu
-GarageType
-GarageFinish
-GarageQual
-GarageCond
-PavedDrive
-PoolQC
-Fence
-MiscFeature
-SaleType
-SaleCondition;
-model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition
-/selection=Stepwise(select=SL) stats =adjrsq;
-Run;
-
 */
+
+
+/*
+Proc glmselect data=train;
+class MSZoning
+LotFrontage
+Street
+Alley
+LotShape
+LandContour
+Utilities
+LotConfig
+LandSlope
+Neighborhood
+Condition1
+Condition2
+BldgType
+HouseStyle
+RoofStyle
+RoofMatl
+Exterior1st
+Exterior2nd
+MasVnrType
+ExterQual
+ExterCond
+Foundation
+BsmtQual
+BsmtCond
+BsmtExposure
+BsmtFinType1
+BsmtFinType2
+Heating
+HeatingQC
+CentralAir
+Electrical
+KitchenQual
+Functional
+FireplaceQu
+GarageType
+GarageFinish
+GarageQual
+GarageCond
+PavedDrive
+PoolQC
+Fence
+MiscFeature
+SaleType
+SaleCondition;
+model SalePrice = MSSubClass MSZoning LotFrontage LotArea Street Alley LotShape LandContour Utilities LotConfig LandSlope Neighborhood Condition1 Condition2 BldgType HouseStyle OverallQual OverallCond YearBuilt YearRemodAdd RoofStyle RoofMatl Exterior1st Exterior2nd MasVnrType MasVnrArea ExterQual ExterCond Foundation BsmtQual BsmtCond BsmtExposure BsmtFinType1 BsmtFinSF1 BsmtFinType2 BsmtFinSF2 BsmtUnfSF Heating HeatingQC CentralAir Electrical '1stFlrSF'n '2ndFlrSF'n LowQualFinSF BsmtFullBath BsmtHalfBath FullBath HalfBath BedroomAbvGr KitchenAbvGr KitchenQual TotRmsAbvGrd Functional Fireplaces FireplaceQu GarageType GarageYrBlt GarageFinish GarageCars GarageArea GarageQual GarageCond PavedDrive WoodDeckSF OpenPorchSF EnclosedPorch '3SsnPorch'n ScreenPorch PoolArea PoolQC Fence MiscFeature MiscVal MoSold YrSold SaleType SaleCondition
+/selection=Stepwise stats =adjrsq;
+Run;
+*/
+
