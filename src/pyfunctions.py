@@ -176,7 +176,6 @@ def transform_numerics(df, delim='#', label='SalePrice', random_seed=42):
     '''
     out_vals = {}
     func_dic = {'sqr': _app_squared, 'log': _app_log, 'sqrt' : _app_sqrt, 'cube': _app_cube} 
-    
     # df_t[col].apply(func_dic['sqr'])
     y = df[label]
     X = df.drop(label, axis=1)
