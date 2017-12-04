@@ -37,14 +37,52 @@ def create_dummy_vars(df, delim='#', null_fill=-1):
         dfdummy[col].fillna(null_fill, inplace=True)
     return dfdummy
 
+def bring_dummy_to_test(params_df, test_data, delim='#', null_fill=False):
+    '''
+    this is an ohh shit function
+    '''
+    trset = set(test_data.columns)
+    backdex = pd.Series(params_df.index)
+    backval = backdex[backdex.apply(lambda x: True if x not in trset else False)]
+    numvals = backval[backval.apply(lambda x: delim not in x)]
+    for val in numvals.values:
+        if val.lower() == 'intercept':
+            test_data[val] = 1
+        elif val[:3].lower() == 'log':
+            test_data[val] = np.log(test_data[val[3:]] + 1)
+        else:
+            test_data[val] = test_data[val[3:]]
+    catvals = backval[backval.apply(lambda x: delim in x)]
+    # teset = set(test_data.columns)
+    # train_cols = pd.Series(test_cols.columns)
+    # not_in_test = train_cols[train_cols.apply(lambda x: True if x in teset else False)]
+    for col in catvals:
+        test_data[col] = False
+    return test_data[params_df.index]
+    
+def get_predictions(params, clean_test):
+    pest = params['Estimate']
+    new_df = clean_test.copy()
+    for col in clean_test.columns:
+        new_df[col] = new_df[col] * pest[col]
+    return np.exp(new_df.T.sum())
+
 def reduce_variables(df, y_col, min_r2, max_cov_r2):
     '''
     Reduces the number of variables in a dataframe by eliminating all variables with an r2 below a given threshold and 
     eliminating half of the variables with too high of a covariance.
     --------
     PARAMETERS
+    df: pd.DataFrame
+        -   Contains labeled data
+    y_col: str
+    min_r2: float (between 0 and 1)
+        -   Min allowable r2 between the variable and the label col prior to rejecting it
+    max_cov_r2: float (between 0 and 1)
+        -   Max allowable covaraince level between varaibles before eliminating one of them
     --------
     RETURNS
+    dataframe with reduced variable count
     '''
     y = df[y_col]
     score = {}
@@ -76,6 +114,14 @@ def reduce_variables(df, y_col, min_r2, max_cov_r2):
     return df[new_keep_cols]
 
 def convert_tsv(input_file, output_File):
+    '''
+    Convert tsv from SAS output to parameters for use in Linear Model
+    --------
+    input_file: str
+        -   Location of file to convert
+    output_file: str
+        -   Location of file to write to
+    '''
     with open(input_file, 'r') as readfile:
         params = readfile.read()
     big_dict = pd.Series()

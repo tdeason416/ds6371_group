@@ -1,0 +1,231 @@
+Parameter	DF	Estimate	Standard
+Error	t Value
+Intercept	1	2.763297	0.964356	2.87
+IntLotFrontage	1	-0.000254	0.000174	-1.46
+MSSubClass	1	-0.000169	0.000256	-0.66
+MSZoning C	1	-0.395397	0.046848	-8.44
+MSZoning FV	1	0.085973	0.035835	2.40
+MSZoning RH	1	0.078871	0.040631	1.94
+MSZoning RL	1	0.040038	0.019618	2.04
+MSZoning RM	0	0	.	.
+LogLotArea	1	0.081825	0.014193	5.77
+Street Grvl	1	-0.133936	0.065710	-2.04
+Street Pave	0	0	.	.
+Alley Gr	1	-0.037105	0.029564	-1.26
+Alley NA	1	-0.024209	0.023013	-1.05
+Alley Pa	0	0	.	.
+LotShape IR1	1	-0.007949	0.008426	-0.94
+LotShape IR2	1	-0.001410	0.024213	-0.06
+LotShape IR3	1	0.073942	0.045983	1.61
+LotShape Reg	0	0	.	.
+LotConfig Corner	1	0.012825	0.008983	1.43
+LotConfig CulDSac	1	0.042849	0.018303	2.34
+LotConfig FR2	1	-0.036476	0.020349	-1.79
+LotConfig FR3	1	-0.063863	0.055380	-1.15
+LotConfig Inside	0	0	.	.
+LandSlope Gtl	1	0.181234	0.059100	3.07
+LandSlope Mod	1	0.197221	0.060930	3.24
+LandSlope Sev	0	0	.	.
+Neighborhood Blmngtn	1	-0.032314	0.054986	-0.59
+Neighborhood Blueste	1	0.056905	0.092439	0.62
+Neighborhood BrDale	1	0.033816	0.060887	0.56
+Neighborhood BrkSide	1	0.019520	0.052030	0.38
+Neighborhood ClearCr	1	-0.037675	0.054796	-0.69
+Neighborhood CollgCr	1	-0.069243	0.045060	-1.54
+Neighborhood Crawfor	1	0.094387	0.047995	1.97
+Neighborhood Edwards	1	-0.126565	0.046264	-2.74
+Neighborhood Gilbert	1	-0.075332	0.047245	-1.59
+Neighborhood IDOTRR	1	0.015653	0.057498	0.27
+Neighborhood MeadowV	1	-0.116830	0.063516	-1.84
+Neighborhood Mitchel	1	-0.080864	0.047940	-1.69
+Neighborhood NAmes	1	-0.079463	0.044558	-1.78
+Neighborhood NPkVill	1	-0.084092	0.086785	-0.97
+Neighborhood NWAmes	1	-0.095962	0.046634	-2.06
+Neighborhood NoRidge	1	0.001377	0.047833	0.03
+Neighborhood NridgHt	1	0.039540	0.046373	0.85
+Neighborhood OldTown	1	-0.035397	0.051846	-0.68
+Neighborhood SWISU	1	-0.034323	0.053167	-0.65
+Neighborhood Sawyer	1	-0.068996	0.046730	-1.48
+Neighborhood SawyerW	1	-0.054541	0.046374	-1.18
+Neighborhood Somerst	1	-0.023246	0.050534	-0.46
+Neighborhood StoneBr	1	0.103256	0.050631	2.04
+Neighborhood Timber	1	-0.053328	0.047521	-1.12
+Neighborhood Veenker	0	0	.	.
+Condition1 Artery	1	-0.120740	0.066718	-1.81
+Condition1 Feedr	1	-0.075760	0.065737	-1.15
+Condition1 Norm	1	-0.033825	0.063713	-0.53
+Condition1 PosA	1	-0.105884	0.089507	-1.18
+Condition1 PosN	1	-0.014134	0.076624	-0.18
+Condition1 RRAe	1	-0.152492	0.075990	-2.01
+Condition1 RRAn	1	-0.048827	0.065061	-0.75
+Condition1 RRNe	1	-0.034937	0.120530	-0.29
+Condition1 RRNn	0	0	.	.
+Condition2 Artery	1	-0.029936	0.122425	-0.24
+Condition2 Feedr	1	-0.042525	0.096765	-0.44
+Condition2 Norm	1	0.028020	0.078684	0.36
+Condition2 PosA	1	0.248492	0.173605	1.43
+Condition2 PosN	1	-0.689070	0.117844	-5.85
+Condition2 RRNn	0	0	.	.
+BldgType 1Fam	1	0.020815	0.031604	0.66
+BldgType 2fmCon	1	0.027490	0.039007	0.70
+BldgType Duplex	1	-0.022346	0.042293	-0.53
+BldgType Twnhs	1	-0.026069	0.025039	-1.04
+BldgType TwnhsE	0	0	.	.
+OverallQual	1	0.043981	0.005024	8.75
+OverallCond	1	0.040080	0.004547	8.81
+YearBuilt	1	0.001906	0.000393	4.85
+YearRemodAdd	1	0.000527	0.000276	1.91
+RoofMatl ClyTile	1	-1.764297	0.204234	-8.64
+RoofMatl CompShg	1	-0.103710	0.050976	-2.03
+RoofMatl Membran	1	0.174668	0.136689	1.28
+RoofMatl Roll	1	0.003212	0.125266	0.03
+RoofMatl Tar&Grv	1	-0.130411	0.070026	-1.86
+RoofMatl WdShake	1	-0.155746	0.097026	-1.61
+RoofMatl WdShngl	0	0	.	.
+Exterior1st AsbShng	1	0.010579	0.065188	0.16
+Exterior1st BrkComm	1	-0.389853	0.129444	-3.01
+Exterior1st BrkFace	1	0.039334	0.039900	0.99
+Exterior1st CBlock	1	-0.074869	0.110412	-0.68
+Exterior1st CemntBd	1	-0.106103	0.086437	-1.23
+Exterior1st HdBoard	1	-0.063039	0.036339	-1.73
+Exterior1st ImStucc	1	-0.030076	0.116849	-0.26
+Exterior1st MetalSd	1	0.054808	0.052772	1.04
+Exterior1st Plywood	1	-0.068710	0.037242	-1.84
+Exterior1st Stone	1	-0.068206	0.132437	-0.52
+Exterior1st Stucco	1	0.033188	0.049909	0.66
+Exterior1st VinylSd	1	0.011817	0.044484	0.27
+Exterior1st Wd Sdng	1	-0.060473	0.034899	-1.73
+Exterior1st WdShing	0	0	.	.
+Exterior2nd AsbShng	1	-0.064467	0.060236	-1.07
+Exterior2nd AsphShn	1	0.112855	0.083119	1.36
+Exterior2nd Brk Cmn	1	0.164038	0.095040	1.73
+Exterior2nd BrkFace	1	-0.016666	0.043553	-0.38
+Exterior2nd CBlock	0	0	.	.
+Exterior2nd CmentBd	1	0.116620	0.083382	1.40
+Exterior2nd HdBoard	1	0.045503	0.036118	1.26
+Exterior2nd ImStucc	1	0.055730	0.049294	1.13
+Exterior2nd MetalSd	1	-0.038608	0.051790	-0.75
+Exterior2nd Other	1	-0.120883	0.114013	-1.06
+Exterior2nd Plywood	1	0.041827	0.034495	1.21
+Exterior2nd Stone	1	0.032556	0.073233	0.44
+Exterior2nd Stucco	1	-0.016035	0.047618	-0.34
+Exterior2nd VinylSd	1	-0.000758	0.041252	-0.02
+Exterior2nd Wd Sdng	1	0.061000	0.031350	1.95
+Exterior2nd Wd Shng	0	0	.	.
+MasVnrType BrkCmn	1	-0.075196	0.038738	-1.94
+MasVnrType BrkFace	1	-0.015516	0.013378	-1.16
+MasVnrType NA	1	-0.060777	0.043486	-1.40
+MasVnrType None	1	-0.019547	0.014088	-1.39
+MasVnrType Stone	0	0	.	.
+ExterCond Ex	1	0.019113	0.105670	0.18
+ExterCond Fa	1	-0.036632	0.029978	-1.22
+ExterCond Gd	1	-0.026043	0.012099	-2.15
+ExterCond TA	0	0	.	.
+Foundation BrkTil	1	0.218721	0.078846	2.77
+Foundation CBlock	1	0.258104	0.077644	3.32
+Foundation PConc	1	0.258482	0.076993	3.36
+Foundation Slab	1	0.315905	0.093449	3.38
+Foundation Stone	1	0.330759	0.090910	3.64
+Foundation Wood	0	0	.	.
+BsmtQual Ex	1	0.051969	0.019407	2.68
+BsmtQual Fa	1	-0.004436	0.022341	-0.20
+BsmtQual Gd	1	0.016774	0.012922	1.30
+BsmtQual NA	1	-0.020214	0.109293	-0.18
+BsmtQual TA	0	0	.	.
+BsmtExposure Av	1	0.010286	0.010591	0.97
+BsmtExposure Gd	1	0.066815	0.014509	4.60
+BsmtExposure Mn	1	0.003236	0.012472	0.26
+BsmtExposure NA	1	-0.053228	0.100969	-0.53
+BsmtExposure No	0	0	.	.
+BsmtFinType1 ALQ	1	-0.108850	0.039050	-2.79
+BsmtFinType1 BLQ	1	-0.105361	0.039628	-2.66
+BsmtFinType1 GLQ	1	-0.086128	0.036711	-2.35
+BsmtFinType1 LwQ	1	-0.126670	0.040834	-3.10
+BsmtFinType1 NA	0	0	.	.
+BsmtFinType1 Rec	1	-0.119039	0.040151	-2.96
+BsmtFinType1 Unf	0	0	.	.
+LogBsmtFinSF1	1	0.028180	0.007314	3.85
+BsmtFinSF2	1	0.000063953	0.000027619	2.32
+BsmtUnfSF	1	0.000024454	0.000019112	1.28
+Heating GasA	1	-0.034565	0.076454	-0.45
+Heating GasW	1	0.084826	0.079303	1.07
+Heating Grav	1	-0.083981	0.112233	-0.75
+Heating OthW	1	0.006871	0.135507	0.05
+Heating Wall	0	0	.	.
+HeatingQC Ex	1	0.038287	0.010715	3.57
+HeatingQC Fa	1	0.027651	0.023930	1.16
+HeatingQC Gd	1	0.014087	0.011048	1.28
+HeatingQC Po	1	-0.078457	0.114728	-0.68
+HeatingQC TA	0	0	.	.
+CentralAir N	1	-0.088836	0.019646	-4.52
+CentralAir Y	0	0	.	.
+Log1stFlrSF	1	0.346367	0.027336	12.67
+2ndFlrSF	1	0.000209	0.000020450	10.22
+BsmtFullBath	1	0.019871	0.009395	2.12
+FullBath	1	0.022106	0.011209	1.97
+HalfBath	1	0.026308	0.010443	2.52
+KitchenAbvGr	1	-0.055568	0.032921	-1.69
+KitchenQual Ex	1	0.071307	0.018367	3.88
+KitchenQual Fa	1	0.000653	0.025117	0.03
+KitchenQual Gd	1	-0.003759	0.010697	-0.35
+KitchenQual TA	0	0	.	.
+TotRmsAbvGrd	1	0.005667	0.004358	1.30
+Functional Maj1	1	-0.063272	0.036501	-1.73
+Functional Maj2	1	-0.245460	0.059838	-4.10
+Functional Min1	1	-0.055121	0.023432	-2.35
+Functional Min2	1	-0.066112	0.022878	-2.89
+Functional Mod	1	-0.074363	0.036531	-2.04
+Functional Typ	0	0	.	.
+Fireplaces	1	0.017657	0.006812	2.59
+GarageType 2Types	1	-0.075196	0.054452	-1.38
+GarageType Attchd	1	-0.010778	0.011429	-0.94
+GarageType Basment	1	-0.028586	0.032345	-0.88
+GarageType BuiltIn	1	-0.036827	0.019536	-1.89
+GarageType CarPort	1	-0.019726	0.043611	-0.45
+GarageType Detchd	0	0	.	.
+GarageFinish Fin	1	0.017795	0.012273	1.45
+GarageFinish RFn	1	0.018071	0.010839	1.67
+GarageFinish Unf	0	0	.	.
+GarageCars	1	0.035750	0.011525	3.10
+LogGarageArea	1	0.032566	0.018670	1.74
+GarageQual Ex	1	0.317891	0.122978	2.58
+GarageQual Fa	1	-0.033383	0.021745	-1.54
+GarageQual Gd	1	0.023360	0.036856	0.63
+GarageQual Po	1	-0.107260	0.100091	-1.07
+GarageQual TA	0	0	.	.
+GarageCond Ex	1	-0.321564	0.143180	-2.25
+GarageCond Fa	1	-0.021429	0.025405	-0.84
+GarageCond Gd	1	0.026731	0.050697	0.53
+GarageCond Po	1	0.107092	0.069654	1.54
+GarageCond TA	0	0	.	.
+PavedDrive N	1	-0.011264	0.019058	-0.59
+PavedDrive P	1	-0.037773	0.025582	-1.48
+PavedDrive Y	0	0	.	.
+LogWoodDeckSF	1	0.003105	0.001455	2.13
+LogOpenPorchSF	1	0.003180	0.001924	1.65
+LogEnclosedPorch	1	0.004931	0.002279	2.16
+Log3SsnPorch	1	0.011069	0.004903	2.26
+LogScreenPorch	1	0.008839	0.002403	3.68
+LogPoolArea	1	0.839796	0.644726	1.30
+PoolQC Ex	1	-5.107219	4.050150	-1.26
+PoolQC Fa	1	-5.357974	4.104926	-1.31
+PoolQC Gd	1	-5.153240	4.099669	-1.26
+PoolQC NA	0	0	.	.
+Fence GdPrv	1	-0.022975	0.018218	-1.26
+Fence GdWo	1	-0.030021	0.018164	-1.65
+Fence MnPrv	1	-0.003539	0.011608	-0.30
+Fence MnWw	1	-0.031698	0.035007	-0.91
+Fence NA	0	0	.	.
+SaleType COD	1	0.021975	0.020988	1.05
+SaleType CWD	1	0.067437	0.053746	1.25
+SaleType Con	1	0.080819	0.029332	2.76
+SaleType New	1	0.117770	0.066694	1.77
+SaleType Oth	1	0.163032	0.102664	1.59
+SaleType WD	0	0	.	.
+SaleCondition Abnorml	1	0.010226	0.067035	0.15
+SaleCondition AdjLand	1	0.313303	0.126678	2.47
+SaleCondition Alloca	1	0.038659	0.078327	0.49
+SaleCondition Family	1	0.030843	0.070340	0.44
+SaleCondition Normal	1	0.072764	0.065950	1.10
+SaleCondition Partial	0	0	.	.
+
