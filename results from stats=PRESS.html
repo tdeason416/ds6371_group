@@ -1,0 +1,4902 @@
+<!DOCTYPE html>
+<html class="ods_d59758c7-5558-4c93-b3cd-9c20ed84845b" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: BriansCode2.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c section > table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c section > pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c div > table,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c div > pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c article > table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c article > pre,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j section > table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j section > pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j div > table,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j div > pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j article > table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j article > pre,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c p.note, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c p.fatal,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j p.note, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j p.fatal,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.c > table.layoutcontainer, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l p.note,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.l p.fatal { margin-left: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c p.note,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r p.note,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r table, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r pre, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r p.note,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion.r p.fatal { margin-right: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b article, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b aside, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b details, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b figcaption, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b figure, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b footer, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b header, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b hgroup, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b nav, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b section { display: block }
+html.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b { font-size: 100% }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b ul, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b dd { margin: 0 0 0 40px }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b nav ul, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b img { border: 0; vertical-align: middle }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b svg:not(:root) { overflow: hidden }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b figure { margin: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b table { border-collapse: collapse; border-spacing: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p { margin-top: 0; text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h1.heading1 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h2.heading2 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h3.heading3 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h4.heading4 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h5.heading5 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b h6.heading6 { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b span { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b table { margin-bottom: 1em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b td, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b td[class$="fixed"], .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b th[class$="fixed"] { white-space: pre }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b section, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b article { padding-top: 1px; padding-bottom: 8px }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .stacked-value { text-align: left; display: block }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .stacked-cell > .stacked-value, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b td.data > td.data, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b th.data > td.data, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b th.data > th.data, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b td.data > th.data, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b th.header > th.header { border: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .stacked-cell > div.data { border-width: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > p { margin: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch { display: table }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .toc { display: none }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .proc_note_group, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .proc_title_group { margin-bottom: 1em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p.proctitle { margin: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p.note, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p.warning, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p.error, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b p.fatal { display: table }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notebanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warnbanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorbanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalbanner,
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notecontent, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warncontent, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorcontent, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notebanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warnbanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorbanner, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalbanner { padding-right: 0 }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body > div > ol li { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .c { text-align: center }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .r { text-align: right }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .l { text-align: left }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .j { text-align: justify }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .d { text-align: right }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .b { vertical-align: bottom }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .m { vertical-align: middle }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .t { vertical-align: top }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch { border: hidden; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > colgroup > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > colgroup, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > * > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer > tfoot { border: none; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .cell, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contentfolder, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contentproclabel, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .data, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph { border: hidden; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading1, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading2, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading3, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading4, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading5, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .indexaction, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutcontainer, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list3, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list4, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list5, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list6, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list7, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list8, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem3, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem4, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem5, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem6, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem7, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem8, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output { border: hidden; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pagesproclabel, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > colgroup > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > colgroup, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > * > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip > tfoot { border: none; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter10, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter2, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter3, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter4, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter5, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter6, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter7, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter8, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle10, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle2, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle3, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle4, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle5, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle6, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle7, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle8, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > colgroup > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > colgroup, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > * > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer > tfoot { border: none; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table { border: hidden; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > colgroup > col, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > colgroup, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > * > tr, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > thead, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > tbody, .ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer > tfoot { border: none; }
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_d59758c7-5558-4c93-b3cd-9c20ed84845b .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_d59758c7-5558-4c93-b3cd-9c20ed84845b" class="c body">
+<h1 class="body toc">Results: BriansCode2.sas</h1>
+<section data-name="GLMSelect" data-sec-type="proc">
+<div id="IDX" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<h1 class="contentprocname toc">The GLMSELECT Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.TRAIN_DUMMY</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Variable</th>
+<td class="r data">LogSalePrice</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Selection Method</th>
+<td class="r data">Stepwise</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Select Criterion</th>
+<td class="r data">SBC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stop Criterion</th>
+<td class="r data">Significance Level</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Entry Significance Level (SLE)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stay Significance Level (SLS)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Effect Hierarchy Enforced</th>
+<td class="r data">None</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX1" aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">1460</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">1121</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX2" aria-label="Class Level Information">
+<h1 class="contentitem toc">Class Level Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Class Level Information">
+<caption aria-label="Class Level Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Class Level Information</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Class</th>
+<th class="r b header" scope="col">Levels</th>
+<th class="b header" scope="col">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">MSZoning</th>
+<td class="r data">5</td>
+<td class="data">C FV RH RL RM</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Street</th>
+<td class="r data">2</td>
+<td class="data">Grvl Pave</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Alley</th>
+<td class="r data">3</td>
+<td class="data">Gr NA Pa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotShape</th>
+<td class="r data">4</td>
+<td class="data">IR1 IR2 IR3 Reg</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandContour</th>
+<td class="r data">4</td>
+<td class="data">Bnk HLS Low Lvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Utilities</th>
+<td class="r data">1</td>
+<td class="data">AllPub</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotConfig</th>
+<td class="r data">5</td>
+<td class="data">Corner CulDSac FR2 FR3 Inside</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandSlope</th>
+<td class="r data">3</td>
+<td class="data">Gtl Mod Sev</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood</th>
+<td class="r data">25</td>
+<td class="data">Blmngtn Blueste BrDale BrkSide ClearCr CollgCr Crawfor Edwards Gilbert IDOTRR MeadowV Mitchel NAmes NPkVill NWAmes NoRidge NridgHt OldTown SWISU Sawyer SawyerW Somerst StoneBr Timber Veenker</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition1</th>
+<td class="r data">9</td>
+<td class="data">Artery Feedr Norm PosA PosN RRAe RRAn RRNe RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2</th>
+<td class="r data">6</td>
+<td class="data">Artery Feedr Norm PosA PosN RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BldgType</th>
+<td class="r data">5</td>
+<td class="data">1Fam 2fmCon Duplex Twnhs TwnhsE</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HouseStyle</th>
+<td class="r data">8</td>
+<td class="data">1.5Fin 1.5Unf 1Story 2.5Fin 2.5Unf 2Story SFoyer SLvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofStyle</th>
+<td class="r data">5</td>
+<td class="data">Flat Gable Gambr Hip Mansa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl</th>
+<td class="r data">7</td>
+<td class="data">ClyTile CompShg Membran Roll Tar&amp;Grv WdShake WdShngl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior1st</th>
+<td class="r data">14</td>
+<td class="data">AsbShng BrkComm BrkFace CBlock CemntBd HdBoard ImStucc MetalSd Plywood Stone Stucco VinylSd Wd Sdng WdShing</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior2nd</th>
+<td class="r data">16</td>
+<td class="data">AsbShng AsphShn Brk Cmn BrkFace CBlock CmentBd HdBoard ImStucc MetalSd Other Plywood Stone Stucco VinylSd Wd Sdng Wd Shng</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MasVnrType</th>
+<td class="r data">4</td>
+<td class="data">BrkCmn BrkFace None Stone</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterCond</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Foundation</th>
+<td class="r data">6</td>
+<td class="data">BrkTil CBlock PConc Slab Stone Wood</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd NA TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtCond</th>
+<td class="r data">5</td>
+<td class="data">Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtExposure</th>
+<td class="r data">5</td>
+<td class="data">Av Gd Mn NA No</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType1</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType2</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Heating</th>
+<td class="r data">5</td>
+<td class="data">GasA GasW Grav OthW Wall</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HeatingQC</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir</th>
+<td class="r data">2</td>
+<td class="data">N Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Electrical</th>
+<td class="r data">6</td>
+<td class="data">FuseA FuseF FuseP Mix NA SBrkr</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Functional</th>
+<td class="r data">6</td>
+<td class="data">Maj1 Maj2 Min1 Min2 Mod Typ</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">FireplaceQu</th>
+<td class="r data">6</td>
+<td class="data">Ex Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageType</th>
+<td class="r data">6</td>
+<td class="data">2Types Attchd Basment BuiltIn CarPort Detchd</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish</th>
+<td class="r data">3</td>
+<td class="data">Fin RFn Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCond</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PavedDrive</th>
+<td class="r data">3</td>
+<td class="data">N P Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PoolQC</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fence</th>
+<td class="r data">5</td>
+<td class="data">GdPrv GdWo MnPrv MnWw NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MiscFeature</th>
+<td class="r data">4</td>
+<td class="data">NA Othr Shed TenC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleType</th>
+<td class="r data">6</td>
+<td class="data">COD CWD Con New Oth WD</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition</th>
+<td class="r data">6</td>
+<td class="data">Abnorml AdjLand Alloca Family Normal Partial</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX3" aria-label="Dimensions">
+<h1 class="contentitem toc">Dimensions</h1>
+<table class="table" style="border-spacing: 0" aria-label="Dimensions">
+<caption aria-label="Dimensions"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Effects</th>
+<td class="r data">78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Parameters</th>
+<td class="r data">285</td>
+</tr>
+</tbody>
+</table>
+</article>
+<hr class="pagebreak"/>
+<div id="IDX4" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<section>
+<h1 class="contentfolder toc">Model Building Summary</h1>
+<article aria-label="Stepwise Selection Summary">
+<h1 class="contentitem toc">Stepwise Selection Summary</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stepwise Selection Summary">
+<caption aria-label="Stepwise Selection Summary"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="10" scope="colgroup">Stepwise Selection Summary</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Step</th>
+<th class="b header" scope="col">Effect<br/>Entered</th>
+<th class="b header" scope="col">Effect<br/>Removed</th>
+<th class="r b header" scope="col">Number<br/>Effects In</th>
+<th class="r b header" scope="col">Number<br/>Parms In</th>
+<th class="r b header" scope="col">Model<br/>R-Square</th>
+<th class="r b header" scope="col">SBC</th>
+<th class="r b header" scope="col">PRESS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th class="c b footer" colspan="10">*&#160;Optimal&#160;Value&#160;of&#160;Criterion</th>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">0.0000</td>
+<td class="r data" style="white-space: nowrap">-2066.4335</td>
+<td class="r data">176.6399</td>
+<td class="r data">0.00</td>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">OverallQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">2</td>
+<td class="r data">2</td>
+<td class="r data">0.6851</td>
+<td class="r data" style="white-space: nowrap">-3354.5767</td>
+<td class="r data">55.7616</td>
+<td class="r data">2434.03</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">3</td>
+<td class="r data">3</td>
+<td class="r data">0.7412</td>
+<td class="r data" style="white-space: nowrap">-3567.6573</td>
+<td class="r data">45.9654</td>
+<td class="r data">242.55</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">4</td>
+<td class="r data">4</td>
+<td class="r data">0.7818</td>
+<td class="r data" style="white-space: nowrap">-3751.9351</td>
+<td class="r data">38.9323</td>
+<td class="r data">207.85</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<th class="rowheader" scope="row">YearBuilt</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">5</td>
+<td class="r data">5</td>
+<td class="r data">0.8147</td>
+<td class="r data" style="white-space: nowrap">-3928.0564</td>
+<td class="r data">33.1553</td>
+<td class="r data">198.07</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<th class="rowheader" scope="row">OverallCond</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">6</td>
+<td class="r data">6</td>
+<td class="r data">0.8382</td>
+<td class="r data" style="white-space: nowrap">-4073.1053</td>
+<td class="r data">29.0219</td>
+<td class="r data">162.00</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<th class="rowheader" scope="row">LogLotArea</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">7</td>
+<td class="r data">7</td>
+<td class="r data">0.8496</td>
+<td class="r data" style="white-space: nowrap">-4147.7963</td>
+<td class="r data">27.0661</td>
+<td class="r data">84.24</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<th class="rowheader" scope="row">RoofMatl</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">8</td>
+<td class="r data">13</td>
+<td class="r data">0.8656</td>
+<td class="r data" style="white-space: nowrap">-4232.0952</td>
+<td class="r data">24.1556</td>
+<td class="r data">22.05</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">9</td>
+<td class="r data">14</td>
+<td class="r data">0.8744</td>
+<td class="r data" style="white-space: nowrap">-4300.5435</td>
+<td class="r data">22.6489</td>
+<td class="r data">77.09</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<th class="rowheader" scope="row">Neighborhood</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">10</td>
+<td class="r data">38</td>
+<td class="r data">0.8985</td>
+<td class="r data" style="white-space: nowrap">-4371.1382</td>
+<td class="r data">19.2971</td>
+<td class="r data">10.73</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<th class="rowheader" scope="row">GarageCars</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">11</td>
+<td class="r data">39</td>
+<td class="r data">0.9018</td>
+<td class="r data" style="white-space: nowrap">-4400.6906</td>
+<td class="r data">18.7174</td>
+<td class="r data">35.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">12</td>
+<td class="r data">40</td>
+<td class="r data">0.9055</td>
+<td class="r data" style="white-space: nowrap">-4436.9303</td>
+<td class="r data">18.0567</td>
+<td class="r data">42.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<th class="rowheader" scope="row">MSZoning</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">13</td>
+<td class="r data">44</td>
+<td class="r data">0.9101</td>
+<td class="r data" style="white-space: nowrap">-4465.5009</td>
+<td class="r data">17.4914</td>
+<td class="r data">13.96</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<th class="rowheader" scope="row">Condition2</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">14</td>
+<td class="r data">49</td>
+<td class="r data">0.9154</td>
+<td class="r data" style="white-space: nowrap">-4498.0609</td>
+<td class="r data">18.8515</td>
+<td class="r data">13.34</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<th class="rowheader" scope="row">KitchenQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">15</td>
+<td class="r data">52</td>
+<td class="r data">0.9182</td>
+<td class="r data" style="white-space: nowrap">-4514.9270</td>
+<td class="r data">18.5146</td>
+<td class="r data">12.26</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<th class="rowheader" scope="row">SaleCondition</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">16</td>
+<td class="r data">57</td>
+<td class="r data">0.9214</td>
+<td class="r data" style="white-space: nowrap">-4523.8525</td>
+<td class="r data">18.2602</td>
+<td class="r data">8.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">17</td>
+<td class="r data">58</td>
+<td class="r data">0.9226</td>
+<td class="r data" style="white-space: nowrap">-4533.9616</td>
+<td class="r data">18.0625</td>
+<td class="r data">16.37</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<th class="rowheader" scope="row">CentralAir</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">18</td>
+<td class="r data">59</td>
+<td class="r data">0.9237</td>
+<td class="r data" style="white-space: nowrap">-4542.9937</td>
+<td class="r data">17.8060</td>
+<td class="r data">15.32</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<th class="rowheader" scope="row">GarageFinish</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">19</td>
+<td class="r data">61</td>
+<td class="r data">0.9250</td>
+<td class="r data" style="white-space: nowrap">-4548.0730</td>
+<td class="r data">17.5431</td>
+<td class="r data">9.12</td>
+<td class="r data">0.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">20</td>
+<td class="r data">62</td>
+<td class="r data">0.9257</td>
+<td class="r data" style="white-space: nowrap">-4552.6909</td>
+<td class="r data">17.3707</td>
+<td class="r data">11.05</td>
+<td class="r data">0.0009</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">21</td>
+<td class="r data">63</td>
+<td class="r data">0.9263</td>
+<td class="r data" style="white-space: nowrap">-4554.1894</td>
+<td class="r data">17.2921</td>
+<td class="r data">8.07</td>
+<td class="r data">0.0046</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">22</td>
+<td class="r data">64</td>
+<td class="r data">0.9269</td>
+<td class="r data">-4555.8269*</td>
+<td class="r data">17.1852*</td>
+<td class="r data">8.20</td>
+<td class="r data">0.0043</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX5" aria-label="Stop Reason">
+<h1 class="contentitem toc">Stop Reason</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stop Reason">
+<caption aria-label="Stop Reason"></caption>
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<td class="data">Selection stopped as adding or dropping any effect does not improve the selection criterion.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section>
+<h1 class="contentfolder toc">Selected Model</h1>
+<hr class="pagebreak"/>
+<div id="IDX6" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+<p class="c proctitle">Selected Model</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">The selected model is the model at the last step (Step 21).</p>
+</div>
+<article aria-label="Selected Effects">
+<h1 class="contentitem toc">Selected Effects</h1>
+<table class="table" style="border-spacing: 0" aria-label="Selected Effects">
+<caption aria-label="Selected Effects"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Effects:</th>
+<td class="data">Intercept MSZoning LogLotArea Neighborhood Condition2 OverallQual OverallCond YearBuilt RoofMatl LogBsmtFinSF1 CentralAir Log1stFlrSF 2ndFlrSF BsmtFullBath KitchenAbvGr KitchenQual GarageFinish GarageCars LogWoodDeckSF LogOpenPorchSF LogScreenPorch SaleCondition</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX7" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">63</td>
+<td class="r data">163.42779</td>
+<td class="r data">2.59409</td>
+<td class="r data">212.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">1057</td>
+<td class="r data">12.89713</td>
+<td class="r data">0.01220</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">1120</td>
+<td class="r data">176.32491</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX8" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">0.11046</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">12.04841</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.9269</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.9225</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AIC</th>
+<td class="r data" style="white-space: nowrap">-3754.23342</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AICC</th>
+<td class="r data" style="white-space: nowrap">-3746.10071</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PRESS</th>
+<td class="r data">17.18516</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SBC</th>
+<td class="r data" style="white-space: nowrap">-4555.82692</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX9" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">2.433351</td>
+<td class="r data">0.664000</td>
+<td class="r data">3.66</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       C</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.326476</td>
+<td class="r data">0.045596</td>
+<td class="r data" style="white-space: nowrap">-7.16</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       FV</th>
+<td class="r data">1</td>
+<td class="r data">0.097795</td>
+<td class="r data">0.034641</td>
+<td class="r data">2.82</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RH</th>
+<td class="r data">1</td>
+<td class="r data">0.040363</td>
+<td class="r data">0.040920</td>
+<td class="r data">0.99</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RL</th>
+<td class="r data">1</td>
+<td class="r data">0.042573</td>
+<td class="r data">0.018581</td>
+<td class="r data">2.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RM</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogLotArea</th>
+<td class="r data">1</td>
+<td class="r data">0.095983</td>
+<td class="r data">0.011631</td>
+<td class="r data">8.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blmngtn</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045403</td>
+<td class="r data">0.054670</td>
+<td class="r data" style="white-space: nowrap">-0.83</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blueste</th>
+<td class="r data">1</td>
+<td class="r data">0.016407</td>
+<td class="r data">0.093330</td>
+<td class="r data">0.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrDale</th>
+<td class="r data">1</td>
+<td class="r data">0.021599</td>
+<td class="r data">0.058062</td>
+<td class="r data">0.37</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrkSide</th>
+<td class="r data">1</td>
+<td class="r data">0.039986</td>
+<td class="r data">0.050699</td>
+<td class="r data">0.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   ClearCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.059126</td>
+<td class="r data">0.054649</td>
+<td class="r data" style="white-space: nowrap">-1.08</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   CollgCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.039486</td>
+<td class="r data">0.044405</td>
+<td class="r data" style="white-space: nowrap">-0.89</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Crawfor</th>
+<td class="r data">1</td>
+<td class="r data">0.112287</td>
+<td class="r data">0.047981</td>
+<td class="r data">2.34</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Edwards</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.123455</td>
+<td class="r data">0.045871</td>
+<td class="r data" style="white-space: nowrap">-2.69</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Gilbert</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045361</td>
+<td class="r data">0.046535</td>
+<td class="r data" style="white-space: nowrap">-0.97</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   IDOTRR</th>
+<td class="r data">1</td>
+<td class="r data">0.013611</td>
+<td class="r data">0.055717</td>
+<td class="r data">0.24</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   MeadowV</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.100128</td>
+<td class="r data">0.060629</td>
+<td class="r data" style="white-space: nowrap">-1.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Mitchel</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.081181</td>
+<td class="r data">0.047478</td>
+<td class="r data" style="white-space: nowrap">-1.71</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.077424</td>
+<td class="r data">0.044332</td>
+<td class="r data" style="white-space: nowrap">-1.75</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NPkVill</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.026667</td>
+<td class="r data">0.062613</td>
+<td class="r data" style="white-space: nowrap">-0.43</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NWAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.106910</td>
+<td class="r data">0.046026</td>
+<td class="r data" style="white-space: nowrap">-2.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NoRidge</th>
+<td class="r data">1</td>
+<td class="r data">0.019621</td>
+<td class="r data">0.047888</td>
+<td class="r data">0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NridgHt</th>
+<td class="r data">1</td>
+<td class="r data">0.062033</td>
+<td class="r data">0.045641</td>
+<td class="r data">1.36</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   OldTown</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.032773</td>
+<td class="r data">0.050600</td>
+<td class="r data" style="white-space: nowrap">-0.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SWISU</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.022331</td>
+<td class="r data">0.052776</td>
+<td class="r data" style="white-space: nowrap">-0.42</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Sawyer</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.094850</td>
+<td class="r data">0.046484</td>
+<td class="r data" style="white-space: nowrap">-2.04</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SawyerW</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.068615</td>
+<td class="r data">0.046367</td>
+<td class="r data" style="white-space: nowrap">-1.48</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Somerst</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.002462</td>
+<td class="r data">0.050162</td>
+<td class="r data" style="white-space: nowrap">-0.05</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   StoneBr</th>
+<td class="r data">1</td>
+<td class="r data">0.096736</td>
+<td class="r data">0.050136</td>
+<td class="r data">1.93</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Timber</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.015773</td>
+<td class="r data">0.047616</td>
+<td class="r data" style="white-space: nowrap">-0.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Veenker</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Artery</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.037195</td>
+<td class="r data">0.115706</td>
+<td class="r data" style="white-space: nowrap">-0.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Feedr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.056835</td>
+<td class="r data">0.094788</td>
+<td class="r data" style="white-space: nowrap">-0.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Norm</th>
+<td class="r data">1</td>
+<td class="r data">0.068464</td>
+<td class="r data">0.080871</td>
+<td class="r data">0.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosA</th>
+<td class="r data">1</td>
+<td class="r data">0.214739</td>
+<td class="r data">0.139874</td>
+<td class="r data">1.54</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosN</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.634447</td>
+<td class="r data">0.114831</td>
+<td class="r data" style="white-space: nowrap">-5.53</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     RRNn</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallQual</th>
+<td class="r data">1</td>
+<td class="r data">0.058897</td>
+<td class="r data">0.004808</td>
+<td class="r data">12.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallCond</th>
+<td class="r data">1</td>
+<td class="r data">0.047338</td>
+<td class="r data">0.003995</td>
+<td class="r data">11.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">YearBuilt</th>
+<td class="r data">1</td>
+<td class="r data">0.002621</td>
+<td class="r data">0.000304</td>
+<td class="r data">8.61</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       ClyTile</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-1.628480</td>
+<td class="r data">0.124099</td>
+<td class="r data" style="white-space: nowrap">-13.12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       CompShg</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.132856</td>
+<td class="r data">0.047591</td>
+<td class="r data" style="white-space: nowrap">-2.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Membran</th>
+<td class="r data">1</td>
+<td class="r data">0.022952</td>
+<td class="r data">0.123788</td>
+<td class="r data">0.19</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Roll</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.130134</td>
+<td class="r data">0.122264</td>
+<td class="r data" style="white-space: nowrap">-1.06</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Tar&amp;Grv</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.202109</td>
+<td class="r data">0.065408</td>
+<td class="r data" style="white-space: nowrap">-3.09</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShake</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.204848</td>
+<td class="r data">0.092597</td>
+<td class="r data" style="white-space: nowrap">-2.21</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShngl</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<td class="r data">1</td>
+<td class="r data">0.011119</td>
+<td class="r data">0.001503</td>
+<td class="r data">7.40</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     N</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.073293</td>
+<td class="r data">0.017521</td>
+<td class="r data" style="white-space: nowrap">-4.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     Y</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.404321</td>
+<td class="r data">0.018699</td>
+<td class="r data">21.62</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.000246</td>
+<td class="r data">0.000011022</td>
+<td class="r data">22.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<td class="r data">1</td>
+<td class="r data">0.031820</td>
+<td class="r data">0.008593</td>
+<td class="r data">3.70</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.086124</td>
+<td class="r data">0.020168</td>
+<td class="r data" style="white-space: nowrap">-4.27</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Ex</th>
+<td class="r data">1</td>
+<td class="r data">0.097355</td>
+<td class="r data">0.018262</td>
+<td class="r data">5.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Fa</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.010269</td>
+<td class="r data">0.025318</td>
+<td class="r data" style="white-space: nowrap">-0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Gd</th>
+<td class="r data">1</td>
+<td class="r data">0.014719</td>
+<td class="r data">0.010234</td>
+<td class="r data">1.44</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    TA</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Fin</th>
+<td class="r data">1</td>
+<td class="r data">0.042068</td>
+<td class="r data">0.011788</td>
+<td class="r data">3.57</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   RFn</th>
+<td class="r data">1</td>
+<td class="r data">0.030232</td>
+<td class="r data">0.010220</td>
+<td class="r data">2.96</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Unf</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCars</th>
+<td class="r data">1</td>
+<td class="r data">0.059185</td>
+<td class="r data">0.007604</td>
+<td class="r data">7.78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<td class="r data">1</td>
+<td class="r data">0.004205</td>
+<td class="r data">0.001469</td>
+<td class="r data">2.86</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<td class="r data">1</td>
+<td class="r data">0.005996</td>
+<td class="r data">0.001976</td>
+<td class="r data">3.03</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<td class="r data">1</td>
+<td class="r data">0.008624</td>
+<td class="r data">0.002427</td>
+<td class="r data">3.55</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Abnorml</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.118718</td>
+<td class="r data">0.018883</td>
+<td class="r data" style="white-space: nowrap">-6.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  AdjLand</th>
+<td class="r data">1</td>
+<td class="r data">0.159529</td>
+<td class="r data">0.113486</td>
+<td class="r data">1.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Alloca</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.133985</td>
+<td class="r data">0.042298</td>
+<td class="r data" style="white-space: nowrap">-3.17</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Family</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.107906</td>
+<td class="r data">0.029625</td>
+<td class="r data" style="white-space: nowrap">-3.64</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Normal</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.055147</td>
+<td class="r data">0.012949</td>
+<td class="r data" style="white-space: nowrap">-4.26</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Partial</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+<section data-name="GLMSelect" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX10" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<h1 class="contentprocname toc">The GLMSELECT Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.TRAIN_DUMMY</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Variable</th>
+<td class="r data">LogSalePrice</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Selection Method</th>
+<td class="r data">Stepwise</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Select Criterion</th>
+<td class="r data">SBC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stop Criterion</th>
+<td class="r data">Significance Level</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Entry Significance Level (SLE)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stay Significance Level (SLS)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Effect Hierarchy Enforced</th>
+<td class="r data">None</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX11" aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">1460</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">1121</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX12" aria-label="Class Level Information">
+<h1 class="contentitem toc">Class Level Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Class Level Information">
+<caption aria-label="Class Level Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Class Level Information</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Class</th>
+<th class="r b header" scope="col">Levels</th>
+<th class="b header" scope="col">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">MSZoning</th>
+<td class="r data">5</td>
+<td class="data">C FV RH RL RM</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Street</th>
+<td class="r data">2</td>
+<td class="data">Grvl Pave</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Alley</th>
+<td class="r data">3</td>
+<td class="data">Gr NA Pa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotShape</th>
+<td class="r data">4</td>
+<td class="data">IR1 IR2 IR3 Reg</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandContour</th>
+<td class="r data">4</td>
+<td class="data">Bnk HLS Low Lvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Utilities</th>
+<td class="r data">1</td>
+<td class="data">AllPub</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotConfig</th>
+<td class="r data">5</td>
+<td class="data">Corner CulDSac FR2 FR3 Inside</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandSlope</th>
+<td class="r data">3</td>
+<td class="data">Gtl Mod Sev</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood</th>
+<td class="r data">25</td>
+<td class="data">Blmngtn Blueste BrDale BrkSide ClearCr CollgCr Crawfor Edwards Gilbert IDOTRR MeadowV Mitchel NAmes NPkVill NWAmes NoRidge NridgHt OldTown SWISU Sawyer SawyerW Somerst StoneBr Timber Veenker</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition1</th>
+<td class="r data">9</td>
+<td class="data">Artery Feedr Norm PosA PosN RRAe RRAn RRNe RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2</th>
+<td class="r data">6</td>
+<td class="data">Artery Feedr Norm PosA PosN RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BldgType</th>
+<td class="r data">5</td>
+<td class="data">1Fam 2fmCon Duplex Twnhs TwnhsE</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HouseStyle</th>
+<td class="r data">8</td>
+<td class="data">1.5Fin 1.5Unf 1Story 2.5Fin 2.5Unf 2Story SFoyer SLvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofStyle</th>
+<td class="r data">5</td>
+<td class="data">Flat Gable Gambr Hip Mansa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl</th>
+<td class="r data">7</td>
+<td class="data">ClyTile CompShg Membran Roll Tar&amp;Grv WdShake WdShngl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior1st</th>
+<td class="r data">14</td>
+<td class="data">AsbShng BrkComm BrkFace CBlock CemntBd HdBoard ImStucc MetalSd Plywood Stone Stucco VinylSd Wd Sdng WdShing</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior2nd</th>
+<td class="r data">16</td>
+<td class="data">AsbShng AsphShn Brk Cmn BrkFace CBlock CmentBd HdBoard ImStucc MetalSd Other Plywood Stone Stucco VinylSd Wd Sdng Wd Shng</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MasVnrType</th>
+<td class="r data">4</td>
+<td class="data">BrkCmn BrkFace None Stone</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterCond</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Foundation</th>
+<td class="r data">6</td>
+<td class="data">BrkTil CBlock PConc Slab Stone Wood</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd NA TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtCond</th>
+<td class="r data">5</td>
+<td class="data">Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtExposure</th>
+<td class="r data">5</td>
+<td class="data">Av Gd Mn NA No</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType1</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType2</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Heating</th>
+<td class="r data">5</td>
+<td class="data">GasA GasW Grav OthW Wall</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HeatingQC</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir</th>
+<td class="r data">2</td>
+<td class="data">N Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Electrical</th>
+<td class="r data">6</td>
+<td class="data">FuseA FuseF FuseP Mix NA SBrkr</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Functional</th>
+<td class="r data">6</td>
+<td class="data">Maj1 Maj2 Min1 Min2 Mod Typ</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">FireplaceQu</th>
+<td class="r data">6</td>
+<td class="data">Ex Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageType</th>
+<td class="r data">6</td>
+<td class="data">2Types Attchd Basment BuiltIn CarPort Detchd</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish</th>
+<td class="r data">3</td>
+<td class="data">Fin RFn Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCond</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PavedDrive</th>
+<td class="r data">3</td>
+<td class="data">N P Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PoolQC</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fence</th>
+<td class="r data">5</td>
+<td class="data">GdPrv GdWo MnPrv MnWw NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MiscFeature</th>
+<td class="r data">4</td>
+<td class="data">NA Othr Shed TenC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleType</th>
+<td class="r data">6</td>
+<td class="data">COD CWD Con New Oth WD</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition</th>
+<td class="r data">6</td>
+<td class="data">Abnorml AdjLand Alloca Family Normal Partial</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX13" aria-label="Dimensions">
+<h1 class="contentitem toc">Dimensions</h1>
+<table class="table" style="border-spacing: 0" aria-label="Dimensions">
+<caption aria-label="Dimensions"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Effects</th>
+<td class="r data">78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Parameters</th>
+<td class="r data">285</td>
+</tr>
+</tbody>
+</table>
+</article>
+<hr class="pagebreak"/>
+<div id="IDX14" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<section>
+<h1 class="contentfolder toc">Model Building Summary</h1>
+<article aria-label="Stepwise Selection Summary">
+<h1 class="contentitem toc">Stepwise Selection Summary</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stepwise Selection Summary">
+<caption aria-label="Stepwise Selection Summary"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="10" scope="colgroup">Stepwise Selection Summary</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Step</th>
+<th class="b header" scope="col">Effect<br/>Entered</th>
+<th class="b header" scope="col">Effect<br/>Removed</th>
+<th class="r b header" scope="col">Number<br/>Effects In</th>
+<th class="r b header" scope="col">Number<br/>Parms In</th>
+<th class="r b header" scope="col">Model<br/>R-Square</th>
+<th class="r b header" scope="col">SBC</th>
+<th class="r b header" scope="col">PRESS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th class="c b footer" colspan="10">*&#160;Optimal&#160;Value&#160;of&#160;Criterion</th>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">0.0000</td>
+<td class="r data" style="white-space: nowrap">-2066.4335</td>
+<td class="r data">176.6399</td>
+<td class="r data">0.00</td>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">OverallQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">2</td>
+<td class="r data">2</td>
+<td class="r data">0.6851</td>
+<td class="r data" style="white-space: nowrap">-3354.5767</td>
+<td class="r data">55.7616</td>
+<td class="r data">2434.03</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">3</td>
+<td class="r data">3</td>
+<td class="r data">0.7412</td>
+<td class="r data" style="white-space: nowrap">-3567.6573</td>
+<td class="r data">45.9654</td>
+<td class="r data">242.55</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">4</td>
+<td class="r data">4</td>
+<td class="r data">0.7818</td>
+<td class="r data" style="white-space: nowrap">-3751.9351</td>
+<td class="r data">38.9323</td>
+<td class="r data">207.85</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<th class="rowheader" scope="row">YearBuilt</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">5</td>
+<td class="r data">5</td>
+<td class="r data">0.8147</td>
+<td class="r data" style="white-space: nowrap">-3928.0564</td>
+<td class="r data">33.1553</td>
+<td class="r data">198.07</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<th class="rowheader" scope="row">OverallCond</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">6</td>
+<td class="r data">6</td>
+<td class="r data">0.8382</td>
+<td class="r data" style="white-space: nowrap">-4073.1053</td>
+<td class="r data">29.0219</td>
+<td class="r data">162.00</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<th class="rowheader" scope="row">LogLotArea</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">7</td>
+<td class="r data">7</td>
+<td class="r data">0.8496</td>
+<td class="r data" style="white-space: nowrap">-4147.7963</td>
+<td class="r data">27.0661</td>
+<td class="r data">84.24</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<th class="rowheader" scope="row">RoofMatl</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">8</td>
+<td class="r data">13</td>
+<td class="r data">0.8656</td>
+<td class="r data" style="white-space: nowrap">-4232.0952</td>
+<td class="r data">24.1556</td>
+<td class="r data">22.05</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">9</td>
+<td class="r data">14</td>
+<td class="r data">0.8744</td>
+<td class="r data" style="white-space: nowrap">-4300.5435</td>
+<td class="r data">22.6489</td>
+<td class="r data">77.09</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<th class="rowheader" scope="row">Neighborhood</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">10</td>
+<td class="r data">38</td>
+<td class="r data">0.8985</td>
+<td class="r data" style="white-space: nowrap">-4371.1382</td>
+<td class="r data">19.2971</td>
+<td class="r data">10.73</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<th class="rowheader" scope="row">GarageCars</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">11</td>
+<td class="r data">39</td>
+<td class="r data">0.9018</td>
+<td class="r data" style="white-space: nowrap">-4400.6906</td>
+<td class="r data">18.7174</td>
+<td class="r data">35.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">12</td>
+<td class="r data">40</td>
+<td class="r data">0.9055</td>
+<td class="r data" style="white-space: nowrap">-4436.9303</td>
+<td class="r data">18.0567</td>
+<td class="r data">42.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<th class="rowheader" scope="row">MSZoning</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">13</td>
+<td class="r data">44</td>
+<td class="r data">0.9101</td>
+<td class="r data" style="white-space: nowrap">-4465.5009</td>
+<td class="r data">17.4914</td>
+<td class="r data">13.96</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<th class="rowheader" scope="row">Condition2</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">14</td>
+<td class="r data">49</td>
+<td class="r data">0.9154</td>
+<td class="r data" style="white-space: nowrap">-4498.0609</td>
+<td class="r data">18.8515</td>
+<td class="r data">13.34</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<th class="rowheader" scope="row">KitchenQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">15</td>
+<td class="r data">52</td>
+<td class="r data">0.9182</td>
+<td class="r data" style="white-space: nowrap">-4514.9270</td>
+<td class="r data">18.5146</td>
+<td class="r data">12.26</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<th class="rowheader" scope="row">SaleCondition</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">16</td>
+<td class="r data">57</td>
+<td class="r data">0.9214</td>
+<td class="r data" style="white-space: nowrap">-4523.8525</td>
+<td class="r data">18.2602</td>
+<td class="r data">8.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">17</td>
+<td class="r data">58</td>
+<td class="r data">0.9226</td>
+<td class="r data" style="white-space: nowrap">-4533.9616</td>
+<td class="r data">18.0625</td>
+<td class="r data">16.37</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<th class="rowheader" scope="row">CentralAir</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">18</td>
+<td class="r data">59</td>
+<td class="r data">0.9237</td>
+<td class="r data" style="white-space: nowrap">-4542.9937</td>
+<td class="r data">17.8060</td>
+<td class="r data">15.32</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<th class="rowheader" scope="row">GarageFinish</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">19</td>
+<td class="r data">61</td>
+<td class="r data">0.9250</td>
+<td class="r data" style="white-space: nowrap">-4548.0730</td>
+<td class="r data">17.5431</td>
+<td class="r data">9.12</td>
+<td class="r data">0.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">20</td>
+<td class="r data">62</td>
+<td class="r data">0.9257</td>
+<td class="r data" style="white-space: nowrap">-4552.6909</td>
+<td class="r data">17.3707</td>
+<td class="r data">11.05</td>
+<td class="r data">0.0009</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">21</td>
+<td class="r data">63</td>
+<td class="r data">0.9263</td>
+<td class="r data" style="white-space: nowrap">-4554.1894</td>
+<td class="r data">17.2921</td>
+<td class="r data">8.07</td>
+<td class="r data">0.0046</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">22</td>
+<td class="r data">64</td>
+<td class="r data">0.9269</td>
+<td class="r data">-4555.8269*</td>
+<td class="r data">17.1852*</td>
+<td class="r data">8.20</td>
+<td class="r data">0.0043</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX15" aria-label="Stop Reason">
+<h1 class="contentitem toc">Stop Reason</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stop Reason">
+<caption aria-label="Stop Reason"></caption>
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<td class="data">Selection stopped as adding or dropping any effect does not improve the selection criterion.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section>
+<h1 class="contentfolder toc">Selected Model</h1>
+<hr class="pagebreak"/>
+<div id="IDX16" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+<p class="c proctitle">Selected Model</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">The selected model is the model at the last step (Step 21).</p>
+</div>
+<article aria-label="Selected Effects">
+<h1 class="contentitem toc">Selected Effects</h1>
+<table class="table" style="border-spacing: 0" aria-label="Selected Effects">
+<caption aria-label="Selected Effects"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Effects:</th>
+<td class="data">Intercept MSZoning LogLotArea Neighborhood Condition2 OverallQual OverallCond YearBuilt RoofMatl LogBsmtFinSF1 CentralAir Log1stFlrSF 2ndFlrSF BsmtFullBath KitchenAbvGr KitchenQual GarageFinish GarageCars LogWoodDeckSF LogOpenPorchSF LogScreenPorch SaleCondition</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX17" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">63</td>
+<td class="r data">163.42779</td>
+<td class="r data">2.59409</td>
+<td class="r data">212.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">1057</td>
+<td class="r data">12.89713</td>
+<td class="r data">0.01220</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">1120</td>
+<td class="r data">176.32491</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX18" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">0.11046</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">12.04841</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.9269</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.9225</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AIC</th>
+<td class="r data" style="white-space: nowrap">-3754.23342</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AICC</th>
+<td class="r data" style="white-space: nowrap">-3746.10071</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PRESS</th>
+<td class="r data">17.18516</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SBC</th>
+<td class="r data" style="white-space: nowrap">-4555.82692</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX19" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">2.433351</td>
+<td class="r data">0.664000</td>
+<td class="r data">3.66</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       C</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.326476</td>
+<td class="r data">0.045596</td>
+<td class="r data" style="white-space: nowrap">-7.16</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       FV</th>
+<td class="r data">1</td>
+<td class="r data">0.097795</td>
+<td class="r data">0.034641</td>
+<td class="r data">2.82</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RH</th>
+<td class="r data">1</td>
+<td class="r data">0.040363</td>
+<td class="r data">0.040920</td>
+<td class="r data">0.99</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RL</th>
+<td class="r data">1</td>
+<td class="r data">0.042573</td>
+<td class="r data">0.018581</td>
+<td class="r data">2.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RM</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogLotArea</th>
+<td class="r data">1</td>
+<td class="r data">0.095983</td>
+<td class="r data">0.011631</td>
+<td class="r data">8.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blmngtn</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045403</td>
+<td class="r data">0.054670</td>
+<td class="r data" style="white-space: nowrap">-0.83</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blueste</th>
+<td class="r data">1</td>
+<td class="r data">0.016407</td>
+<td class="r data">0.093330</td>
+<td class="r data">0.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrDale</th>
+<td class="r data">1</td>
+<td class="r data">0.021599</td>
+<td class="r data">0.058062</td>
+<td class="r data">0.37</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrkSide</th>
+<td class="r data">1</td>
+<td class="r data">0.039986</td>
+<td class="r data">0.050699</td>
+<td class="r data">0.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   ClearCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.059126</td>
+<td class="r data">0.054649</td>
+<td class="r data" style="white-space: nowrap">-1.08</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   CollgCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.039486</td>
+<td class="r data">0.044405</td>
+<td class="r data" style="white-space: nowrap">-0.89</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Crawfor</th>
+<td class="r data">1</td>
+<td class="r data">0.112287</td>
+<td class="r data">0.047981</td>
+<td class="r data">2.34</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Edwards</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.123455</td>
+<td class="r data">0.045871</td>
+<td class="r data" style="white-space: nowrap">-2.69</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Gilbert</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045361</td>
+<td class="r data">0.046535</td>
+<td class="r data" style="white-space: nowrap">-0.97</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   IDOTRR</th>
+<td class="r data">1</td>
+<td class="r data">0.013611</td>
+<td class="r data">0.055717</td>
+<td class="r data">0.24</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   MeadowV</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.100128</td>
+<td class="r data">0.060629</td>
+<td class="r data" style="white-space: nowrap">-1.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Mitchel</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.081181</td>
+<td class="r data">0.047478</td>
+<td class="r data" style="white-space: nowrap">-1.71</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.077424</td>
+<td class="r data">0.044332</td>
+<td class="r data" style="white-space: nowrap">-1.75</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NPkVill</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.026667</td>
+<td class="r data">0.062613</td>
+<td class="r data" style="white-space: nowrap">-0.43</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NWAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.106910</td>
+<td class="r data">0.046026</td>
+<td class="r data" style="white-space: nowrap">-2.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NoRidge</th>
+<td class="r data">1</td>
+<td class="r data">0.019621</td>
+<td class="r data">0.047888</td>
+<td class="r data">0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NridgHt</th>
+<td class="r data">1</td>
+<td class="r data">0.062033</td>
+<td class="r data">0.045641</td>
+<td class="r data">1.36</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   OldTown</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.032773</td>
+<td class="r data">0.050600</td>
+<td class="r data" style="white-space: nowrap">-0.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SWISU</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.022331</td>
+<td class="r data">0.052776</td>
+<td class="r data" style="white-space: nowrap">-0.42</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Sawyer</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.094850</td>
+<td class="r data">0.046484</td>
+<td class="r data" style="white-space: nowrap">-2.04</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SawyerW</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.068615</td>
+<td class="r data">0.046367</td>
+<td class="r data" style="white-space: nowrap">-1.48</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Somerst</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.002462</td>
+<td class="r data">0.050162</td>
+<td class="r data" style="white-space: nowrap">-0.05</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   StoneBr</th>
+<td class="r data">1</td>
+<td class="r data">0.096736</td>
+<td class="r data">0.050136</td>
+<td class="r data">1.93</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Timber</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.015773</td>
+<td class="r data">0.047616</td>
+<td class="r data" style="white-space: nowrap">-0.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Veenker</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Artery</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.037195</td>
+<td class="r data">0.115706</td>
+<td class="r data" style="white-space: nowrap">-0.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Feedr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.056835</td>
+<td class="r data">0.094788</td>
+<td class="r data" style="white-space: nowrap">-0.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Norm</th>
+<td class="r data">1</td>
+<td class="r data">0.068464</td>
+<td class="r data">0.080871</td>
+<td class="r data">0.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosA</th>
+<td class="r data">1</td>
+<td class="r data">0.214739</td>
+<td class="r data">0.139874</td>
+<td class="r data">1.54</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosN</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.634447</td>
+<td class="r data">0.114831</td>
+<td class="r data" style="white-space: nowrap">-5.53</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     RRNn</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallQual</th>
+<td class="r data">1</td>
+<td class="r data">0.058897</td>
+<td class="r data">0.004808</td>
+<td class="r data">12.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallCond</th>
+<td class="r data">1</td>
+<td class="r data">0.047338</td>
+<td class="r data">0.003995</td>
+<td class="r data">11.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">YearBuilt</th>
+<td class="r data">1</td>
+<td class="r data">0.002621</td>
+<td class="r data">0.000304</td>
+<td class="r data">8.61</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       ClyTile</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-1.628480</td>
+<td class="r data">0.124099</td>
+<td class="r data" style="white-space: nowrap">-13.12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       CompShg</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.132856</td>
+<td class="r data">0.047591</td>
+<td class="r data" style="white-space: nowrap">-2.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Membran</th>
+<td class="r data">1</td>
+<td class="r data">0.022952</td>
+<td class="r data">0.123788</td>
+<td class="r data">0.19</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Roll</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.130134</td>
+<td class="r data">0.122264</td>
+<td class="r data" style="white-space: nowrap">-1.06</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Tar&amp;Grv</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.202109</td>
+<td class="r data">0.065408</td>
+<td class="r data" style="white-space: nowrap">-3.09</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShake</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.204848</td>
+<td class="r data">0.092597</td>
+<td class="r data" style="white-space: nowrap">-2.21</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShngl</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<td class="r data">1</td>
+<td class="r data">0.011119</td>
+<td class="r data">0.001503</td>
+<td class="r data">7.40</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     N</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.073293</td>
+<td class="r data">0.017521</td>
+<td class="r data" style="white-space: nowrap">-4.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     Y</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.404321</td>
+<td class="r data">0.018699</td>
+<td class="r data">21.62</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.000246</td>
+<td class="r data">0.000011022</td>
+<td class="r data">22.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<td class="r data">1</td>
+<td class="r data">0.031820</td>
+<td class="r data">0.008593</td>
+<td class="r data">3.70</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.086124</td>
+<td class="r data">0.020168</td>
+<td class="r data" style="white-space: nowrap">-4.27</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Ex</th>
+<td class="r data">1</td>
+<td class="r data">0.097355</td>
+<td class="r data">0.018262</td>
+<td class="r data">5.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Fa</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.010269</td>
+<td class="r data">0.025318</td>
+<td class="r data" style="white-space: nowrap">-0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Gd</th>
+<td class="r data">1</td>
+<td class="r data">0.014719</td>
+<td class="r data">0.010234</td>
+<td class="r data">1.44</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    TA</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Fin</th>
+<td class="r data">1</td>
+<td class="r data">0.042068</td>
+<td class="r data">0.011788</td>
+<td class="r data">3.57</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   RFn</th>
+<td class="r data">1</td>
+<td class="r data">0.030232</td>
+<td class="r data">0.010220</td>
+<td class="r data">2.96</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Unf</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCars</th>
+<td class="r data">1</td>
+<td class="r data">0.059185</td>
+<td class="r data">0.007604</td>
+<td class="r data">7.78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<td class="r data">1</td>
+<td class="r data">0.004205</td>
+<td class="r data">0.001469</td>
+<td class="r data">2.86</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<td class="r data">1</td>
+<td class="r data">0.005996</td>
+<td class="r data">0.001976</td>
+<td class="r data">3.03</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<td class="r data">1</td>
+<td class="r data">0.008624</td>
+<td class="r data">0.002427</td>
+<td class="r data">3.55</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Abnorml</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.118718</td>
+<td class="r data">0.018883</td>
+<td class="r data" style="white-space: nowrap">-6.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  AdjLand</th>
+<td class="r data">1</td>
+<td class="r data">0.159529</td>
+<td class="r data">0.113486</td>
+<td class="r data">1.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Alloca</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.133985</td>
+<td class="r data">0.042298</td>
+<td class="r data" style="white-space: nowrap">-3.17</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Family</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.107906</td>
+<td class="r data">0.029625</td>
+<td class="r data" style="white-space: nowrap">-3.64</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Normal</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.055147</td>
+<td class="r data">0.012949</td>
+<td class="r data" style="white-space: nowrap">-4.26</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Partial</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+<section data-name="GLMSelect" data-sec-type="proc">
+<hr class="pagebreak"/>
+<div id="IDX20" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<h1 class="contentprocname toc">The GLMSELECT Procedure</h1>
+<article aria-label="Model Information">
+<h1 class="contentitem toc">Model Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Model Information">
+<caption aria-label="Model Information"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.TRAIN_DUMMY</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Variable</th>
+<td class="r data">LogSalePrice</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Selection Method</th>
+<td class="r data">Stepwise</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Select Criterion</th>
+<td class="r data">SBC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stop Criterion</th>
+<td class="r data">Significance Level</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Entry Significance Level (SLE)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Stay Significance Level (SLS)</th>
+<td class="r data">0.15</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Effect Hierarchy Enforced</th>
+<td class="r data">None</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX21" aria-label="Number of Observations">
+<h1 class="contentitem toc">Number of Observations</h1>
+<table class="table" style="border-spacing: 0" aria-label="Number of Observations">
+<caption aria-label="Number of Observations"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">1460</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">1121</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX22" aria-label="Class Level Information">
+<h1 class="contentitem toc">Class Level Information</h1>
+<table class="table" style="border-spacing: 0" aria-label="Class Level Information">
+<caption aria-label="Class Level Information"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Class Level Information</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Class</th>
+<th class="r b header" scope="col">Levels</th>
+<th class="b header" scope="col">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">MSZoning</th>
+<td class="r data">5</td>
+<td class="data">C FV RH RL RM</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Street</th>
+<td class="r data">2</td>
+<td class="data">Grvl Pave</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Alley</th>
+<td class="r data">3</td>
+<td class="data">Gr NA Pa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotShape</th>
+<td class="r data">4</td>
+<td class="data">IR1 IR2 IR3 Reg</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandContour</th>
+<td class="r data">4</td>
+<td class="data">Bnk HLS Low Lvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Utilities</th>
+<td class="r data">1</td>
+<td class="data">AllPub</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LotConfig</th>
+<td class="r data">5</td>
+<td class="data">Corner CulDSac FR2 FR3 Inside</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LandSlope</th>
+<td class="r data">3</td>
+<td class="data">Gtl Mod Sev</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood</th>
+<td class="r data">25</td>
+<td class="data">Blmngtn Blueste BrDale BrkSide ClearCr CollgCr Crawfor Edwards Gilbert IDOTRR MeadowV Mitchel NAmes NPkVill NWAmes NoRidge NridgHt OldTown SWISU Sawyer SawyerW Somerst StoneBr Timber Veenker</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition1</th>
+<td class="r data">9</td>
+<td class="data">Artery Feedr Norm PosA PosN RRAe RRAn RRNe RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2</th>
+<td class="r data">6</td>
+<td class="data">Artery Feedr Norm PosA PosN RRNn</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BldgType</th>
+<td class="r data">5</td>
+<td class="data">1Fam 2fmCon Duplex Twnhs TwnhsE</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HouseStyle</th>
+<td class="r data">8</td>
+<td class="data">1.5Fin 1.5Unf 1Story 2.5Fin 2.5Unf 2Story SFoyer SLvl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofStyle</th>
+<td class="r data">5</td>
+<td class="data">Flat Gable Gambr Hip Mansa</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl</th>
+<td class="r data">7</td>
+<td class="data">ClyTile CompShg Membran Roll Tar&amp;Grv WdShake WdShngl</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior1st</th>
+<td class="r data">14</td>
+<td class="data">AsbShng BrkComm BrkFace CBlock CemntBd HdBoard ImStucc MetalSd Plywood Stone Stucco VinylSd Wd Sdng WdShing</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Exterior2nd</th>
+<td class="r data">16</td>
+<td class="data">AsbShng AsphShn Brk Cmn BrkFace CBlock CmentBd HdBoard ImStucc MetalSd Other Plywood Stone Stucco VinylSd Wd Sdng Wd Shng</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MasVnrType</th>
+<td class="r data">4</td>
+<td class="data">BrkCmn BrkFace None Stone</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">ExterCond</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Foundation</th>
+<td class="r data">6</td>
+<td class="data">BrkTil CBlock PConc Slab Stone Wood</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd NA TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtCond</th>
+<td class="r data">5</td>
+<td class="data">Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtExposure</th>
+<td class="r data">5</td>
+<td class="data">Av Gd Mn NA No</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType1</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFinType2</th>
+<td class="r data">7</td>
+<td class="data">ALQ BLQ GLQ LwQ NA Rec Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Heating</th>
+<td class="r data">5</td>
+<td class="data">GasA GasW Grav OthW Wall</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">HeatingQC</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir</th>
+<td class="r data">2</td>
+<td class="data">N Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Electrical</th>
+<td class="r data">6</td>
+<td class="data">FuseA FuseF FuseP Mix NA SBrkr</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Functional</th>
+<td class="r data">6</td>
+<td class="data">Maj1 Maj2 Min1 Min2 Mod Typ</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">FireplaceQu</th>
+<td class="r data">6</td>
+<td class="data">Ex Fa Gd NA Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageType</th>
+<td class="r data">6</td>
+<td class="data">2Types Attchd Basment BuiltIn CarPort Detchd</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish</th>
+<td class="r data">3</td>
+<td class="data">Fin RFn Unf</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageQual</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCond</th>
+<td class="r data">5</td>
+<td class="data">Ex Fa Gd Po TA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PavedDrive</th>
+<td class="r data">3</td>
+<td class="data">N P Y</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PoolQC</th>
+<td class="r data">4</td>
+<td class="data">Ex Fa Gd NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Fence</th>
+<td class="r data">5</td>
+<td class="data">GdPrv GdWo MnPrv MnWw NA</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MiscFeature</th>
+<td class="r data">4</td>
+<td class="data">NA Othr Shed TenC</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleType</th>
+<td class="r data">6</td>
+<td class="data">COD CWD Con New Oth WD</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition</th>
+<td class="r data">6</td>
+<td class="data">Abnorml AdjLand Alloca Family Normal Partial</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX23" aria-label="Dimensions">
+<h1 class="contentitem toc">Dimensions</h1>
+<table class="table" style="border-spacing: 0" aria-label="Dimensions">
+<caption aria-label="Dimensions"></caption>
+<colgroup><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Number of Effects</th>
+<td class="r data">78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Number of Parameters</th>
+<td class="r data">285</td>
+</tr>
+</tbody>
+</table>
+</article>
+<hr class="pagebreak"/>
+<div id="IDX24" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+</div>
+<section>
+<h1 class="contentfolder toc">Model Building Summary</h1>
+<article aria-label="Stepwise Selection Summary">
+<h1 class="contentitem toc">Stepwise Selection Summary</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stepwise Selection Summary">
+<caption aria-label="Stepwise Selection Summary"></caption>
+<colgroup><col/><col/><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="10" scope="colgroup">Stepwise Selection Summary</th>
+</tr>
+<tr>
+<th class="r b header" scope="col">Step</th>
+<th class="b header" scope="col">Effect<br/>Entered</th>
+<th class="b header" scope="col">Effect<br/>Removed</th>
+<th class="r b header" scope="col">Number<br/>Effects In</th>
+<th class="r b header" scope="col">Number<br/>Parms In</th>
+<th class="r b header" scope="col">Model<br/>R-Square</th>
+<th class="r b header" scope="col">SBC</th>
+<th class="r b header" scope="col">PRESS</th>
+<th class="r b header" scope="col">F Value</th>
+<th class="r b header" scope="col">Pr&#160;&gt;&#160;F</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th class="c b footer" colspan="10">*&#160;Optimal&#160;Value&#160;of&#160;Criterion</th>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">0</th>
+<th class="rowheader" scope="row">Intercept</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">0.0000</td>
+<td class="r data" style="white-space: nowrap">-2066.4335</td>
+<td class="r data">176.6399</td>
+<td class="r data">0.00</td>
+<td class="r data">1.0000</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<th class="rowheader" scope="row">OverallQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">2</td>
+<td class="r data">2</td>
+<td class="r data">0.6851</td>
+<td class="r data" style="white-space: nowrap">-3354.5767</td>
+<td class="r data">55.7616</td>
+<td class="r data">2434.03</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">3</td>
+<td class="r data">3</td>
+<td class="r data">0.7412</td>
+<td class="r data" style="white-space: nowrap">-3567.6573</td>
+<td class="r data">45.9654</td>
+<td class="r data">242.55</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">4</td>
+<td class="r data">4</td>
+<td class="r data">0.7818</td>
+<td class="r data" style="white-space: nowrap">-3751.9351</td>
+<td class="r data">38.9323</td>
+<td class="r data">207.85</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<th class="rowheader" scope="row">YearBuilt</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">5</td>
+<td class="r data">5</td>
+<td class="r data">0.8147</td>
+<td class="r data" style="white-space: nowrap">-3928.0564</td>
+<td class="r data">33.1553</td>
+<td class="r data">198.07</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<th class="rowheader" scope="row">OverallCond</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">6</td>
+<td class="r data">6</td>
+<td class="r data">0.8382</td>
+<td class="r data" style="white-space: nowrap">-4073.1053</td>
+<td class="r data">29.0219</td>
+<td class="r data">162.00</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<th class="rowheader" scope="row">LogLotArea</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">7</td>
+<td class="r data">7</td>
+<td class="r data">0.8496</td>
+<td class="r data" style="white-space: nowrap">-4147.7963</td>
+<td class="r data">27.0661</td>
+<td class="r data">84.24</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<th class="rowheader" scope="row">RoofMatl</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">8</td>
+<td class="r data">13</td>
+<td class="r data">0.8656</td>
+<td class="r data" style="white-space: nowrap">-4232.0952</td>
+<td class="r data">24.1556</td>
+<td class="r data">22.05</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">9</td>
+<td class="r data">14</td>
+<td class="r data">0.8744</td>
+<td class="r data" style="white-space: nowrap">-4300.5435</td>
+<td class="r data">22.6489</td>
+<td class="r data">77.09</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<th class="rowheader" scope="row">Neighborhood</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">10</td>
+<td class="r data">38</td>
+<td class="r data">0.8985</td>
+<td class="r data" style="white-space: nowrap">-4371.1382</td>
+<td class="r data">19.2971</td>
+<td class="r data">10.73</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<th class="rowheader" scope="row">GarageCars</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">11</td>
+<td class="r data">39</td>
+<td class="r data">0.9018</td>
+<td class="r data" style="white-space: nowrap">-4400.6906</td>
+<td class="r data">18.7174</td>
+<td class="r data">35.88</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">12</td>
+<td class="r data">40</td>
+<td class="r data">0.9055</td>
+<td class="r data" style="white-space: nowrap">-4436.9303</td>
+<td class="r data">18.0567</td>
+<td class="r data">42.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<th class="rowheader" scope="row">MSZoning</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">13</td>
+<td class="r data">44</td>
+<td class="r data">0.9101</td>
+<td class="r data" style="white-space: nowrap">-4465.5009</td>
+<td class="r data">17.4914</td>
+<td class="r data">13.96</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<th class="rowheader" scope="row">Condition2</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">14</td>
+<td class="r data">49</td>
+<td class="r data">0.9154</td>
+<td class="r data" style="white-space: nowrap">-4498.0609</td>
+<td class="r data">18.8515</td>
+<td class="r data">13.34</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<th class="rowheader" scope="row">KitchenQual</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">15</td>
+<td class="r data">52</td>
+<td class="r data">0.9182</td>
+<td class="r data" style="white-space: nowrap">-4514.9270</td>
+<td class="r data">18.5146</td>
+<td class="r data">12.26</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<th class="rowheader" scope="row">SaleCondition</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">16</td>
+<td class="r data">57</td>
+<td class="r data">0.9214</td>
+<td class="r data" style="white-space: nowrap">-4523.8525</td>
+<td class="r data">18.2602</td>
+<td class="r data">8.53</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">17</td>
+<td class="r data">58</td>
+<td class="r data">0.9226</td>
+<td class="r data" style="white-space: nowrap">-4533.9616</td>
+<td class="r data">18.0625</td>
+<td class="r data">16.37</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<th class="rowheader" scope="row">CentralAir</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">18</td>
+<td class="r data">59</td>
+<td class="r data">0.9237</td>
+<td class="r data" style="white-space: nowrap">-4542.9937</td>
+<td class="r data">17.8060</td>
+<td class="r data">15.32</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<th class="rowheader" scope="row">GarageFinish</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">19</td>
+<td class="r data">61</td>
+<td class="r data">0.9250</td>
+<td class="r data" style="white-space: nowrap">-4548.0730</td>
+<td class="r data">17.5431</td>
+<td class="r data">9.12</td>
+<td class="r data">0.0001</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">20</td>
+<td class="r data">62</td>
+<td class="r data">0.9257</td>
+<td class="r data" style="white-space: nowrap">-4552.6909</td>
+<td class="r data">17.3707</td>
+<td class="r data">11.05</td>
+<td class="r data">0.0009</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">21</td>
+<td class="r data">63</td>
+<td class="r data">0.9263</td>
+<td class="r data" style="white-space: nowrap">-4554.1894</td>
+<td class="r data">17.2921</td>
+<td class="r data">8.07</td>
+<td class="r data">0.0046</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<th class="rowheader" scope="row">&#160;</th>
+<td class="r data">22</td>
+<td class="r data">64</td>
+<td class="r data">0.9269</td>
+<td class="r data">-4555.8269*</td>
+<td class="r data">17.1852*</td>
+<td class="r data">8.20</td>
+<td class="r data">0.0043</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX25" aria-label="Stop Reason">
+<h1 class="contentitem toc">Stop Reason</h1>
+<table class="table" style="border-spacing: 0" aria-label="Stop Reason">
+<caption aria-label="Stop Reason"></caption>
+<colgroup><col/></colgroup>
+<tbody>
+<tr>
+<td class="data">Selection stopped as adding or dropping any effect does not improve the selection criterion.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+<section>
+<h1 class="contentfolder toc">Selected Model</h1>
+<hr class="pagebreak"/>
+<div id="IDX26" class="proc_title_group">
+<p class="c proctitle">The GLMSELECT Procedure</p>
+<p class="c proctitle">Selected Model</p>
+</div>
+<div class="proc_note_group">
+<p class="c proctitle">The selected model is the model at the last step (Step 21).</p>
+</div>
+<article aria-label="Selected Effects">
+<h1 class="contentitem toc">Selected Effects</h1>
+<table class="table" style="border-spacing: 0" aria-label="Selected Effects">
+<caption aria-label="Selected Effects"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Effects:</th>
+<td class="data">Intercept MSZoning LogLotArea Neighborhood Condition2 OverallQual OverallCond YearBuilt RoofMatl LogBsmtFinSF1 CentralAir Log1stFlrSF 2ndFlrSF BsmtFullBath KitchenAbvGr KitchenQual GarageFinish GarageCars LogWoodDeckSF LogOpenPorchSF LogScreenPorch SaleCondition</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX27" aria-label="ANOVA">
+<h1 class="contentitem toc">ANOVA</h1>
+<table class="table" style="border-spacing: 0" aria-label="ANOVA">
+<caption aria-label="ANOVA"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Analysis of Variance</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Source</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Sum of<br/>Squares</th>
+<th class="r b header" scope="col">Mean<br/>Square</th>
+<th class="r b header" scope="col">F Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Model</th>
+<td class="r data">63</td>
+<td class="r data">163.42779</td>
+<td class="r data">2.59409</td>
+<td class="r data">212.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Error</th>
+<td class="r data">1057</td>
+<td class="r data">12.89713</td>
+<td class="r data">0.01220</td>
+<td class="r data">&#160;</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Corrected Total</th>
+<td class="r data">1120</td>
+<td class="r data">176.32491</td>
+<td class="r data">&#160;</td>
+<td class="r data">&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX28" aria-label="Fit Statistics">
+<h1 class="contentitem toc">Fit Statistics</h1>
+<table class="table" style="border-spacing: 0" aria-label="Fit Statistics">
+<caption aria-label="Fit Statistics"></caption>
+<colgroup><col/><col/></colgroup>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Root MSE</th>
+<td class="r data">0.11046</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Dependent Mean</th>
+<td class="r data">12.04841</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">R-Square</th>
+<td class="r data">0.9269</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Adj R-Sq</th>
+<td class="r data">0.9225</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AIC</th>
+<td class="r data" style="white-space: nowrap">-3754.23342</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">AICC</th>
+<td class="r data" style="white-space: nowrap">-3746.10071</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">PRESS</th>
+<td class="r data">17.18516</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SBC</th>
+<td class="r data" style="white-space: nowrap">-4555.82692</td>
+</tr>
+</tbody>
+</table>
+</article>
+<article id="IDX29" aria-label="Parameter Estimates">
+<h1 class="contentitem toc">Parameter Estimates</h1>
+<table class="table" style="border-spacing: 0" aria-label="Parameter Estimates">
+<caption aria-label="Parameter Estimates"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="5" scope="colgroup">Parameter Estimates</th>
+</tr>
+<tr>
+<th class="b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="r b header" scope="col">t&#160;Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">2.433351</td>
+<td class="r data">0.664000</td>
+<td class="r data">3.66</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       C</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.326476</td>
+<td class="r data">0.045596</td>
+<td class="r data" style="white-space: nowrap">-7.16</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       FV</th>
+<td class="r data">1</td>
+<td class="r data">0.097795</td>
+<td class="r data">0.034641</td>
+<td class="r data">2.82</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RH</th>
+<td class="r data">1</td>
+<td class="r data">0.040363</td>
+<td class="r data">0.040920</td>
+<td class="r data">0.99</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RL</th>
+<td class="r data">1</td>
+<td class="r data">0.042573</td>
+<td class="r data">0.018581</td>
+<td class="r data">2.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">MSZoning       RM</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogLotArea</th>
+<td class="r data">1</td>
+<td class="r data">0.095983</td>
+<td class="r data">0.011631</td>
+<td class="r data">8.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blmngtn</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045403</td>
+<td class="r data">0.054670</td>
+<td class="r data" style="white-space: nowrap">-0.83</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Blueste</th>
+<td class="r data">1</td>
+<td class="r data">0.016407</td>
+<td class="r data">0.093330</td>
+<td class="r data">0.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrDale</th>
+<td class="r data">1</td>
+<td class="r data">0.021599</td>
+<td class="r data">0.058062</td>
+<td class="r data">0.37</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   BrkSide</th>
+<td class="r data">1</td>
+<td class="r data">0.039986</td>
+<td class="r data">0.050699</td>
+<td class="r data">0.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   ClearCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.059126</td>
+<td class="r data">0.054649</td>
+<td class="r data" style="white-space: nowrap">-1.08</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   CollgCr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.039486</td>
+<td class="r data">0.044405</td>
+<td class="r data" style="white-space: nowrap">-0.89</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Crawfor</th>
+<td class="r data">1</td>
+<td class="r data">0.112287</td>
+<td class="r data">0.047981</td>
+<td class="r data">2.34</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Edwards</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.123455</td>
+<td class="r data">0.045871</td>
+<td class="r data" style="white-space: nowrap">-2.69</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Gilbert</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.045361</td>
+<td class="r data">0.046535</td>
+<td class="r data" style="white-space: nowrap">-0.97</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   IDOTRR</th>
+<td class="r data">1</td>
+<td class="r data">0.013611</td>
+<td class="r data">0.055717</td>
+<td class="r data">0.24</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   MeadowV</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.100128</td>
+<td class="r data">0.060629</td>
+<td class="r data" style="white-space: nowrap">-1.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Mitchel</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.081181</td>
+<td class="r data">0.047478</td>
+<td class="r data" style="white-space: nowrap">-1.71</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.077424</td>
+<td class="r data">0.044332</td>
+<td class="r data" style="white-space: nowrap">-1.75</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NPkVill</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.026667</td>
+<td class="r data">0.062613</td>
+<td class="r data" style="white-space: nowrap">-0.43</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NWAmes</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.106910</td>
+<td class="r data">0.046026</td>
+<td class="r data" style="white-space: nowrap">-2.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NoRidge</th>
+<td class="r data">1</td>
+<td class="r data">0.019621</td>
+<td class="r data">0.047888</td>
+<td class="r data">0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   NridgHt</th>
+<td class="r data">1</td>
+<td class="r data">0.062033</td>
+<td class="r data">0.045641</td>
+<td class="r data">1.36</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   OldTown</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.032773</td>
+<td class="r data">0.050600</td>
+<td class="r data" style="white-space: nowrap">-0.65</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SWISU</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.022331</td>
+<td class="r data">0.052776</td>
+<td class="r data" style="white-space: nowrap">-0.42</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Sawyer</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.094850</td>
+<td class="r data">0.046484</td>
+<td class="r data" style="white-space: nowrap">-2.04</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   SawyerW</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.068615</td>
+<td class="r data">0.046367</td>
+<td class="r data" style="white-space: nowrap">-1.48</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Somerst</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.002462</td>
+<td class="r data">0.050162</td>
+<td class="r data" style="white-space: nowrap">-0.05</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   StoneBr</th>
+<td class="r data">1</td>
+<td class="r data">0.096736</td>
+<td class="r data">0.050136</td>
+<td class="r data">1.93</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Timber</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.015773</td>
+<td class="r data">0.047616</td>
+<td class="r data" style="white-space: nowrap">-0.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Neighborhood   Veenker</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Artery</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.037195</td>
+<td class="r data">0.115706</td>
+<td class="r data" style="white-space: nowrap">-0.32</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Feedr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.056835</td>
+<td class="r data">0.094788</td>
+<td class="r data" style="white-space: nowrap">-0.60</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     Norm</th>
+<td class="r data">1</td>
+<td class="r data">0.068464</td>
+<td class="r data">0.080871</td>
+<td class="r data">0.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosA</th>
+<td class="r data">1</td>
+<td class="r data">0.214739</td>
+<td class="r data">0.139874</td>
+<td class="r data">1.54</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     PosN</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.634447</td>
+<td class="r data">0.114831</td>
+<td class="r data" style="white-space: nowrap">-5.53</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Condition2     RRNn</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallQual</th>
+<td class="r data">1</td>
+<td class="r data">0.058897</td>
+<td class="r data">0.004808</td>
+<td class="r data">12.25</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">OverallCond</th>
+<td class="r data">1</td>
+<td class="r data">0.047338</td>
+<td class="r data">0.003995</td>
+<td class="r data">11.85</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">YearBuilt</th>
+<td class="r data">1</td>
+<td class="r data">0.002621</td>
+<td class="r data">0.000304</td>
+<td class="r data">8.61</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       ClyTile</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-1.628480</td>
+<td class="r data">0.124099</td>
+<td class="r data" style="white-space: nowrap">-13.12</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       CompShg</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.132856</td>
+<td class="r data">0.047591</td>
+<td class="r data" style="white-space: nowrap">-2.79</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Membran</th>
+<td class="r data">1</td>
+<td class="r data">0.022952</td>
+<td class="r data">0.123788</td>
+<td class="r data">0.19</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Roll</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.130134</td>
+<td class="r data">0.122264</td>
+<td class="r data" style="white-space: nowrap">-1.06</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       Tar&amp;Grv</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.202109</td>
+<td class="r data">0.065408</td>
+<td class="r data" style="white-space: nowrap">-3.09</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShake</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.204848</td>
+<td class="r data">0.092597</td>
+<td class="r data" style="white-space: nowrap">-2.21</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">RoofMatl       WdShngl</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogBsmtFinSF1</th>
+<td class="r data">1</td>
+<td class="r data">0.011119</td>
+<td class="r data">0.001503</td>
+<td class="r data">7.40</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     N</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.073293</td>
+<td class="r data">0.017521</td>
+<td class="r data" style="white-space: nowrap">-4.18</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">CentralAir     Y</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">Log1stFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.404321</td>
+<td class="r data">0.018699</td>
+<td class="r data">21.62</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">2ndFlrSF</th>
+<td class="r data">1</td>
+<td class="r data">0.000246</td>
+<td class="r data">0.000011022</td>
+<td class="r data">22.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">BsmtFullBath</th>
+<td class="r data">1</td>
+<td class="r data">0.031820</td>
+<td class="r data">0.008593</td>
+<td class="r data">3.70</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenAbvGr</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.086124</td>
+<td class="r data">0.020168</td>
+<td class="r data" style="white-space: nowrap">-4.27</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Ex</th>
+<td class="r data">1</td>
+<td class="r data">0.097355</td>
+<td class="r data">0.018262</td>
+<td class="r data">5.33</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Fa</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.010269</td>
+<td class="r data">0.025318</td>
+<td class="r data" style="white-space: nowrap">-0.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    Gd</th>
+<td class="r data">1</td>
+<td class="r data">0.014719</td>
+<td class="r data">0.010234</td>
+<td class="r data">1.44</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">KitchenQual    TA</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Fin</th>
+<td class="r data">1</td>
+<td class="r data">0.042068</td>
+<td class="r data">0.011788</td>
+<td class="r data">3.57</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   RFn</th>
+<td class="r data">1</td>
+<td class="r data">0.030232</td>
+<td class="r data">0.010220</td>
+<td class="r data">2.96</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageFinish   Unf</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">GarageCars</th>
+<td class="r data">1</td>
+<td class="r data">0.059185</td>
+<td class="r data">0.007604</td>
+<td class="r data">7.78</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogWoodDeckSF</th>
+<td class="r data">1</td>
+<td class="r data">0.004205</td>
+<td class="r data">0.001469</td>
+<td class="r data">2.86</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogOpenPorchSF</th>
+<td class="r data">1</td>
+<td class="r data">0.005996</td>
+<td class="r data">0.001976</td>
+<td class="r data">3.03</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">LogScreenPorch</th>
+<td class="r data">1</td>
+<td class="r data">0.008624</td>
+<td class="r data">0.002427</td>
+<td class="r data">3.55</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Abnorml</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.118718</td>
+<td class="r data">0.018883</td>
+<td class="r data" style="white-space: nowrap">-6.29</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  AdjLand</th>
+<td class="r data">1</td>
+<td class="r data">0.159529</td>
+<td class="r data">0.113486</td>
+<td class="r data">1.41</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Alloca</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.133985</td>
+<td class="r data">0.042298</td>
+<td class="r data" style="white-space: nowrap">-3.17</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Family</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.107906</td>
+<td class="r data">0.029625</td>
+<td class="r data" style="white-space: nowrap">-3.64</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Normal</th>
+<td class="r data">1</td>
+<td class="r data" style="white-space: nowrap">-0.055147</td>
+<td class="r data">0.012949</td>
+<td class="r data" style="white-space: nowrap">-4.26</td>
+</tr>
+<tr>
+<th class="rowheader" scope="row">SaleCondition  Partial</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</section>
+</div>
+</body>
+</html>
